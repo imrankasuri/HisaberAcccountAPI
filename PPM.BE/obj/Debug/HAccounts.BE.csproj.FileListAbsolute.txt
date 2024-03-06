@@ -1,0 +1,5 @@
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.BE\bin\Debug\HAccounts.BE.dll
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.BE\bin\Debug\HAccounts.BE.pdb
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.BE\obj\Debug\HAccounts.BE.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.BE\obj\Debug\HAccounts.BE.dll
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.BE\obj\Debug\HAccounts.BE.pdb

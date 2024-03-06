@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\PPMAPI</_PublishTargetUrl>
+    <History>True|2023-03-26T03:26:36.1394231Z;True|2022-11-14T11:46:16.6844763+05:00;True|2022-11-11T18:02:53.2071529+05:00;True|2022-11-11T17:53:19.9272726+05:00;True|2022-11-11T17:49:57.3716649+05:00;True|2022-11-11T16:43:32.3754078+05:00;True|2022-11-11T16:43:15.9206271+05:00;True|2022-11-11T15:49:20.8692502+05:00;True|2022-11-11T15:48:48.0700980+05:00;True|2022-11-11T15:31:48.3824765+05:00;True|2022-11-11T15:07:03.5587434+05:00;True|2022-11-09T14:48:01.2097641+05:00;True|2022-11-09T12:41:42.0926944+05:00;True|2022-11-08T17:59:21.4023660+05:00;True|2022-11-08T17:49:36.4973098+05:00;True|2022-11-08T17:49:00.6149639+05:00;True|2022-11-08T12:44:09.6055228+05:00;True|2022-11-08T11:06:14.9173872+05:00;True|2022-11-08T10:59:01.6266816+05:00;True|2022-11-08T10:55:40.9923260+05:00;True|2022-11-07T14:42:18.7660944+05:00;True|2022-11-07T14:40:40.8400899+05:00;True|2022-10-26T18:11:06.4053565+05:00;True|2022-10-26T18:10:07.5752694+05:00;True|2022-10-25T15:20:09.6399124+05:00;True|2022-10-25T15:19:42.5478456+05:00;True|2022-10-25T11:38:29.0213705+05:00;True|2022-10-25T11:35:48.0174979+05:00;True|2022-10-25T11:08:07.4856372+05:00;True|2022-10-24T18:38:40.5428473+05:00;True|2022-10-24T18:09:12.7997732+05:00;True|2022-10-24T17:58:04.5123480+05:00;True|2022-10-24T16:50:32.1280023+05:00;True|2022-10-24T14:10:37.8593711+05:00;True|2022-10-24T12:58:34.4199580+05:00;True|2022-10-24T12:05:07.3123760+05:00;True|2022-10-21T16:05:13.4209736+05:00;True|2022-10-21T15:56:04.9842510+05:00;True|2022-10-21T12:26:17.1407779+05:00;True|2022-10-21T12:25:59.3958743+05:00;True|2022-10-10T13:56:33.3062570+05:00;True|2022-10-10T13:55:58.6358512+05:00;True|2022-10-06T14:36:54.5187120+05:00;True|2022-10-06T14:18:30.0671945+05:00;True|2022-10-06T14:18:20.1724464+05:00;True|2022-10-06T11:30:03.2688930+05:00;True|2022-10-06T11:29:49.1603493+05:00;True|2022-10-06T11:27:45.8482203+05:00;True|2022-10-06T11:27:30.8449244+05:00;True|2022-10-06T11:21:23.6782727+05:00;True|2022-10-05T11:16:49.0505661+05:00;True|2022-10-05T11:16:32.0517754+05:00;True|2022-10-05T11:13:34.3398300+05:00;True|2022-09-29T11:48:45.6351309+05:00;True|2022-09-29T11:43:16.7948378+05:00;True|2022-09-29T11:36:26.9903900+05:00;True|2022-09-16T11:40:40.5918008+05:00;True|2022-09-16T11:40:34.5995542+05:00;True|2022-09-16T11:22:59.1472727+05:00;True|2022-09-16T11:17:08.7197171+05:00;True|2022-09-16T11:13:51.9724919+05:00;True|2022-09-14T15:11:43.0265921+05:00;True|2022-09-09T16:15:08.9893580+05:00;True|2022-09-09T16:07:28.1351368+05:00;True|2022-09-09T16:06:55.4591800+05:00;True|2022-09-09T12:11:20.8618496+05:00;True|2022-09-08T18:05:22.9953231+05:00;True|2022-09-08T17:54:28.4473884+05:00;True|2022-09-08T12:01:16.4473707+05:00;True|2022-09-08T11:42:41.5992730+05:00;True|2022-09-08T11:42:21.9109222+05:00;True|2022-09-08T11:33:41.9086259+05:00;True|2022-09-07T18:24:45.2619140+05:00;True|2022-09-07T18:00:09.2701922+05:00;True|2022-09-07T17:35:37.5809752+05:00;True|2022-09-07T16:59:27.9710927+05:00;True|2022-09-07T16:58:40.5689661+05:00;True|2022-09-07T16:13:05.9426394+05:00;True|2022-09-07T14:35:49.6853489+05:00;True|2022-09-07T14:34:51.4417811+05:00;True|2022-09-07T11:03:49.9319632+05:00;True|2022-09-05T15:52:01.4675172+05:00;True|2022-09-02T14:13:54.5922658+05:00;True|2022-09-02T13:59:11.2217540+05:00;True|2022-09-02T12:10:15.6789220+05:00;True|2022-08-30T13:58:07.8831018+05:00;True|2022-08-25T13:47:00.5719154+05:00;True|2022-08-22T14:36:50.2288691+05:00;True|2022-08-22T14:31:43.6359737+05:00;True|2022-08-22T14:25:11.5273458+05:00;True|2022-08-22T14:22:55.7645226+05:00;True|2022-08-17T10:44:08.3473546+05:00;True|2022-08-16T16:31:47.6002131+05:00;True|2022-08-16T16:22:45.2819678+05:00;True|2022-08-16T15:28:56.7208176+05:00;True|2022-08-16T11:51:33.6584914+05:00;True|2022-08-16T11:51:27.3189253+05:00;True|2022-08-16T11:45:21.3239735+05:00;True|2022-08-16T11:44:55.7266533+05:00;True|2022-08-12T11:19:56.0019921+05:00;True|2022-08-12T11:11:17.7054791+05:00;True|2022-08-12T11:03:42.7189475+05:00;True|2022-08-04T13:03:00.9810122+05:00;True|2022-08-03T15:01:35.6313965+05:00;True|2022-08-03T14:41:48.4697929+05:00;True|2022-08-02T11:26:56.4685015+05:00;True|2022-08-01T17:38:41.5716219+05:00;True|2022-08-01T11:28:45.5075510+05:00;True|2022-07-29T16:04:12.9192509+05:00;True|2022-07-28T16:03:14.3238689+05:00;True|2022-07-28T15:04:01.3649530+05:00;True|2022-07-28T14:18:41.3846592+05:00;True|2022-07-28T13:53:07.2081443+05:00;True|2022-07-28T11:41:01.6454727+05:00;True|2022-07-28T11:24:47.2312372+05:00;True|2022-07-28T11:23:37.9204198+05:00;True|2022-07-28T11:20:50.8839693+05:00;True|2022-07-28T11:15:56.6973991+05:00;True|2022-07-28T11:12:12.8084383+05:00;True|2022-07-28T11:00:50.0706606+05:00;True|2022-07-28T10:47:53.5906382+05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/AtomiModel.dll">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>04/04/2019 11:29:39</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/08/2012 23:00:50</publishTime>
+    </File>
+    <File Include="bin/ICTrader.APIs.dll">
+      <publishTime>07/28/2022 11:23:37</publishTime>
+    </File>
+    <File Include="bin/ICTrader.APIs.pdb">
+      <publishTime>07/28/2022 11:23:37</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Administration.dll">
+      <publishTime>03/08/2016 11:28:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 16:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/31/2012 00:26:26</publishTime>
+    </File>
+    <File Include="bin/PPM.APIs.dll">
+      <publishTime>03/26/2023 08:52:40</publishTime>
+    </File>
+    <File Include="bin/PPM.APIs.pdb">
+      <publishTime>03/26/2023 08:52:40</publishTime>
+    </File>
+    <File Include="bin/PPM.BE.dll">
+      <publishTime>03/21/2023 23:44:25</publishTime>
+    </File>
+    <File Include="bin/PPM.BE.pdb">
+      <publishTime>03/21/2023 23:44:25</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.dll">
+      <publishTime>03/26/2023 08:51:45</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.dll.config">
+      <publishTime>03/15/2022 15:38:26</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.pdb">
+      <publishTime>03/26/2023 08:51:45</publishTime>
+    </File>
+    <File Include="bin/RestSharp.dll">
+      <publishTime>10/21/2021 15:26:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/08/2012 22:58:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/08/2012 22:58:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/08/2012 22:58:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>08/08/2012 22:57:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/08/2012 22:57:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/zxing.dll">
+      <publishTime>04/14/2018 18:39:12</publishTime>
+    </File>
+    <File Include="Email_Template/Forgot_Personal.htm">
+      <publishTime>11/09/2022 12:40:37</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/04/2019 11:29:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/28/2022 10:34:09</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/11/2019 15:17:01</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/26/2023 08:26:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

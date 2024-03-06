@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>c:\ictraderAPI</_PublishTargetUrl>
+    <History>True|2022-07-26T06:16:02.0543022Z;True|2022-07-25T10:56:31.8336896+05:00;True|2022-07-25T10:49:00.3368940+05:00;True|2022-07-25T10:45:00.5870537+05:00;True|2022-07-25T10:37:28.2794823+05:00;True|2022-07-25T10:33:13.6617781+05:00;True|2022-07-22T23:06:13.8588275+05:00;True|2022-07-22T18:40:16.9097665+05:00;True|2022-07-21T01:26:00.3596075+05:00;True|2022-07-13T14:46:50.6143844+05:00;True|2022-07-13T13:43:18.7296183+05:00;True|2022-07-13T13:42:30.1240670+05:00;True|2022-07-11T22:46:29.5544782+05:00;True|2022-07-11T22:21:08.3042126+05:00;True|2022-07-09T15:47:41.7199946+05:00;True|2022-07-09T15:46:31.7867706+05:00;True|2022-07-09T15:43:48.2017622+05:00;True|2022-07-07T16:17:14.3862819+05:00;True|2022-07-07T16:09:07.3640670+05:00;True|2022-07-07T16:08:08.2725530+05:00;True|2022-07-06T22:35:50.1278445+05:00;True|2022-07-06T20:21:10.2780337+05:00;True|2022-07-06T20:06:13.2383080+05:00;True|2022-07-01T23:19:40.8916493+05:00;True|2022-07-01T23:04:28.0455622+05:00;True|2022-07-01T23:02:06.9045032+05:00;True|2022-06-23T20:36:32.1925446+05:00;True|2022-06-23T20:35:38.0800818+05:00;True|2022-06-09T20:01:21.9661594+05:00;True|2022-06-07T23:03:32.0154126+05:00;True|2022-06-07T18:00:16.5476058+05:00;True|2022-06-06T20:04:12.6780359+05:00;True|2022-06-06T20:03:53.9652276+05:00;True|2022-06-06T20:03:50.1586232+05:00;True|2022-06-06T07:23:25.1602317+05:00;True|2022-05-30T10:33:21.6132948+05:00;True|2022-05-28T14:48:32.0880095+05:00;True|2022-05-27T23:00:13.7279959+05:00;True|2022-05-27T12:10:27.4714970+05:00;True|2022-05-27T11:18:49.0542799+05:00;True|2022-05-27T11:16:12.7800584+05:00;True|2022-05-27T10:40:49.4574393+05:00;True|2022-05-13T15:33:11.6881224+05:00;True|2022-05-13T14:54:08.1974406+05:00;True|2022-05-13T14:43:59.4340002+05:00;True|2022-05-13T14:42:24.1215883+05:00;True|2022-05-13T14:37:48.7922253+05:00;True|2022-05-13T14:35:58.2010626+05:00;True|2022-05-13T13:27:39.5875231+05:00;True|2022-05-13T13:25:10.9906239+05:00;True|2022-05-13T13:24:53.4365208+05:00;True|2022-05-13T13:23:44.2591869+05:00;True|2022-05-13T11:10:32.9031579+05:00;True|2022-05-13T10:02:07.3351823+05:00;True|2022-05-13T09:43:25.8593579+05:00;True|2022-05-13T09:41:09.5051783+05:00;True|2022-05-11T15:50:12.4065395+05:00;True|2022-05-11T15:33:01.7301236+05:00;True|2022-05-11T11:42:14.7080455+05:00;True|2022-05-11T11:27:53.7676047+05:00;True|2022-05-11T11:22:24.0021605+05:00;True|2022-05-11T10:26:04.7778117+05:00;True|2022-05-11T09:58:19.5479691+05:00;True|2022-05-11T09:54:24.3521446+05:00;True|2022-05-11T09:52:14.8581167+05:00;True|2022-05-11T09:48:50.0862392+05:00;True|2022-05-11T09:15:29.9301418+05:00;True|2022-05-11T09:02:55.1414388+05:00;True|2022-05-11T08:48:20.2840064+05:00;True|2022-05-11T08:41:26.9438125+05:00;True|2022-05-11T08:36:01.7780315+05:00;True|2022-05-11T08:11:38.4137226+05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/AtomiModel.dll">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>04/04/2019 11:29:39</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/08/2012 23:00:50</publishTime>
+    </File>
+    <File Include="bin/ICTrader.APIs.dll">
+      <publishTime>07/26/2022 11:16:01</publishTime>
+    </File>
+    <File Include="bin/ICTrader.APIs.pdb">
+      <publishTime>07/26/2022 11:16:01</publishTime>
+    </File>
+    <File Include="bin/ICTrader.BE.dll">
+      <publishTime>07/19/2022 23:58:12</publishTime>
+    </File>
+    <File Include="bin/ICTrader.BE.pdb">
+      <publishTime>07/19/2022 23:58:12</publishTime>
+    </File>
+    <File Include="bin/ICTrader.DAL.dll">
+      <publishTime>07/25/2022 10:33:12</publishTime>
+    </File>
+    <File Include="bin/ICTrader.DAL.dll.config">
+      <publishTime>06/07/2022 22:35:44</publishTime>
+    </File>
+    <File Include="bin/ICTrader.DAL.pdb">
+      <publishTime>07/25/2022 10:33:12</publishTime>
+    </File>
+    <File Include="bin/ImageResizer.dll">
+      <publishTime>11/21/2012 15:31:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Administration.dll">
+      <publishTime>03/08/2016 11:28:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 16:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/31/2012 00:26:26</publishTime>
+    </File>
+    <File Include="bin/RestSharp.dll">
+      <publishTime>10/21/2021 15:26:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/08/2012 22:58:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/08/2012 22:58:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/08/2012 22:58:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>08/08/2012 22:57:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/08/2012 22:57:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/zxing.dll">
+      <publishTime>04/14/2018 18:39:12</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/04/2019 11:29:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>05/06/2022 11:31:10</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/11/2019 15:17:01</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/25/2022 10:45:00</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

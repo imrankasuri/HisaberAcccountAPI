@@ -1,0 +1,44 @@
+E:\ali imran\personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll.config
+E:\ali imran\personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll
+E:\ali imran\personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.pdb
+E:\ali imran\personal\PPS\PPS.DAL\bin\Debug\PPS.BE.dll
+E:\ali imran\personal\PPS\PPS.DAL\bin\Debug\PPS.BE.pdb
+E:\ali imran\personal\PPS\PPS.DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\ali imran\personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.dll
+E:\ali imran\personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.pdb
+F:\projects\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll.config
+F:\projects\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll
+F:\projects\PPS\PPS.DAL\bin\Debug\PPS.DAL.pdb
+F:\projects\PPS\PPS.DAL\bin\Debug\PPS.BE.dll
+F:\projects\PPS\PPS.DAL\bin\Debug\PPS.BE.pdb
+F:\projects\PPS\PPS.DAL\obj\Debug\PPS.DAL.csprojResolveAssemblyReference.cache
+F:\projects\PPS\PPS.DAL\obj\Debug\PPS.DAL.dll
+F:\projects\PPS\PPS.DAL\obj\Debug\PPS.DAL.pdb
+E:\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll.config
+E:\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll
+E:\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.pdb
+E:\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.BE.dll
+E:\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.BE.pdb
+E:\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.csprojResolveAssemblyReference.cache
+E:\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.dll
+E:\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.pdb
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll.config
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.dll
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.DAL.pdb
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\bin\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.dll
+C:\E Drive\Projects\Personal\PPS\PPS.DAL\obj\Debug\PPS.DAL.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.DAL.dll.config
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.DAL.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPS.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPS.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPS.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPS.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPS.DAL.pdb

@@ -1,0 +1,1750 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OpenTicketDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.gaurdchart' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="gaurdchart">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="Is_SearchLock" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="bigint" Nullable="false" />
+    <Property Name="Train_ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Train_Name" Type="nvarchar" MaxLength="65" Nullable="false" />
+    <Property Name="Coach_Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="Coach_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Berth" Type="nvarchar" MaxLength="20" />
+    <Property Name="TicketNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="TicketCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TicketSerialNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="PassengerName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PassengerCNIC" Type="nvarchar" MaxLength="25" />
+    <Property Name="GuardChartLocation" Type="nvarchar" MaxLength="20" />
+    <Property Name="To_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="To_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="Schedule_From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="From_Station_Seq" Type="int" Nullable="false" />
+    <Property Name="Quota" Type="nvarchar" MaxLength="30" />
+    <Property Name="VoucherPassCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="Departure_Date" Type="date" />
+    <Property Name="DepartureTime" Type="time" Precision="7" />
+    <Property Name="Booking_Type" Type="nchar" MaxLength="30" />
+    <Property Name="PaymentType" Type="nchar" MaxLength="30" />
+    <Property Name="CCPaymentCode" Type="nchar" MaxLength="30" />
+    <Property Name="Train_StartDate" Type="date" />
+    <Property Name="Is_SearchLock" Type="bit" Nullable="false" />
+    <Property Name="Is_Reserved" Type="bit" Nullable="false" />
+    <Property Name="BookingRemarks" Type="nvarchar" MaxLength="350" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenTicketDB.dbo.PassengerT' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="PassengerT">
+          <Property Name="ID" Type="float" />
+          <Property Name="FromDate" Type="datetime" />
+          <Property Name="Todate" Type="datetime" />
+          <Property Name="LowerLeg" Type="float" />
+          <Property Name="UpperLeg" Type="float" />
+          <Property Name="Class" Type="nvarchar" MaxLength="255" />
+          <Property Name="BaseFare" Type="float" />
+          <Property Name="ResCharges" Type="float" />
+          <Property Name="CED" Type="float" />
+          <Property Name="FuelCharges" Type="float" />
+          <Property Name="NonStopCharges" Type="float" />
+          <Property Name="Otherharges" Type="float" />
+          <Property Name="NightCharges" Type="float" />
+          <Property Name="Rebate" Type="float" />
+          <Property Name="Fare_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Is_Active" Type="float" />
+          <Property Name="Is_Deleted" Type="float" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Updated_Date" Type="datetime" />
+          <Property Name="TimeStamp" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblBerthCharges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblBerthCharges">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TrainCat" />
+      <PropertyRef Name="LowerLegDist" />
+      <PropertyRef Name="UpperLegDist" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BerthCharges" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Update_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TrainCat" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LowerLegDist" Type="int" Nullable="false" />
+    <Property Name="UpperLegDist" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BerthCharges" Type="decimal" Precision="8" Scale="4" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="date" Nullable="false" />
+    <Property Name="Update_Date" Type="date" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblConcessionTick' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblConcessionTick">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Ticket_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Tariff" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblCurrentCounter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Id" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="User_Role" Type="nvarchar" MaxLength="10" />
+    <Property Name="Train_ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Coach_Class" Type="nvarchar" MaxLength="20" />
+    <Property Name="Coach_No" Type="nvarchar" MaxLength="20" />
+    <Property Name="Current_Station" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Departure_Date" Type="date" Nullable="false" />
+    <Property Name="DepartureTime" Type="time" Precision="7" />
+    <Property Name="Is_ChartFetch" Type="bit" Nullable="false" />
+    <Property Name="Is_ReservationStopped" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblCurrentSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblCurrentSales">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="BasicFare" />
+      <PropertyRef Name="ReceivedFareAmount" />
+      <PropertyRef Name="RefundedAmount" />
+      <PropertyRef Name="NetEarning" />
+      <PropertyRef Name="BookedByOperatorId" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="BookingRemarks" />
+      <PropertyRef Name="IsCancelled" />
+      <PropertyRef Name="CancellationType" />
+      <PropertyRef Name="CancellationRemarks" />
+      <PropertyRef Name="CancelledByOperatorId" />
+      <PropertyRef Name="CancelledByOperatorName" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="bigint" Nullable="false" />
+    <Property Name="Train_ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Train_Name" Type="nvarchar" MaxLength="65" Nullable="false" />
+    <Property Name="Coach_Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="Coach_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Berth" Type="nvarchar" MaxLength="20" />
+    <Property Name="TicketNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="TicketCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TicketSerialNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="PassengerName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PassengerCNIC" Type="nvarchar" MaxLength="25" />
+    <Property Name="GuardChartLocation" Type="nvarchar" MaxLength="20" />
+    <Property Name="To_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="To_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="Schedule_From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="From_Station_Seq" Type="int" Nullable="false" />
+    <Property Name="Quota" Type="nvarchar" MaxLength="30" />
+    <Property Name="VoucherPassCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="Departure_Date" Type="date" />
+    <Property Name="DepartureTime" Type="time" Precision="7" />
+    <Property Name="Train_StartDate" Type="date" />
+    <Property Name="BasicFare" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceivedFareAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefundedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetEarning" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BookedByOperatorId" Type="int" Nullable="false" />
+    <Property Name="BookedByOperatorName" Type="nvarchar" MaxLength="250" />
+    <Property Name="BookingDate" Type="date" />
+    <Property Name="BookingTime" Type="time" Precision="7" />
+    <Property Name="ReservationCenter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Reserved" Type="bit" Nullable="false" />
+    <Property Name="BookingRemarks" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="Booking_Type" Type="nvarchar" MaxLength="30" />
+    <Property Name="Payment_Method" Type="nvarchar" MaxLength="30" />
+    <Property Name="Payment_Mode" Type="nvarchar" MaxLength="30" />
+    <Property Name="IsCancelled" Type="bit" Nullable="false" />
+    <Property Name="CancellationType" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="CancellationRemarks" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="CancellationDate" Type="datetime" />
+    <Property Name="CancelledByOperatorId" Type="int" Nullable="false" />
+    <Property Name="CancelledByOperatorName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="deviceId" Type="nvarchar" MaxLength="150" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblDeviceUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblDeviceUsers">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="employee_no" />
+      <PropertyRef Name="employee_nam" />
+      <PropertyRef Name="employee_cnic" />
+      <PropertyRef Name="designation" />
+      <PropertyRef Name="scale" />
+      <PropertyRef Name="employee_station" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="is_deleted" />
+      <PropertyRef Name="created_date" />
+      <PropertyRef Name="updated_date" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="employee_no" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="100" />
+    <Property Name="employee_nam" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="employee_cnic" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="division" Type="nvarchar" MaxLength="50" />
+    <Property Name="employee_mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="designation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="scale" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="remarks" Type="nvarchar(max)" />
+    <Property Name="employee_station" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="employee_role" Type="nvarchar" MaxLength="50" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblDistanceDir' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblDistanceDir">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="Station_Code" />
+      <PropertyRef Name="Inter_Station_Distance" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Route_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Station_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Inter_Station_Distance" Type="decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="Distance" Type="decimal" Precision="18" Scale="6" />
+    <Property Name="StationSequnce" Type="int" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblEFTSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblEFTSales">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="BasicFare" />
+      <PropertyRef Name="ReceivedFareAmount" />
+      <PropertyRef Name="RefundedAmount" />
+      <PropertyRef Name="NetEarning" />
+      <PropertyRef Name="BookedByOperatorId" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="BookingRemarks" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="bigint" Nullable="false" />
+    <Property Name="Train_ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Train_Name" Type="nvarchar" MaxLength="65" Nullable="false" />
+    <Property Name="Coach_Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ClassId" Type="int" Nullable="false" />
+    <Property Name="Coach_No" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seat_Berth" Type="nvarchar" MaxLength="20" />
+    <Property Name="TicketNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="TicketCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="TicketSerialNumber" Type="nvarchar" MaxLength="30" />
+    <Property Name="PassengerName" Type="nvarchar" MaxLength="200" />
+    <Property Name="PassengerCNIC" Type="nvarchar" MaxLength="25" />
+    <Property Name="To_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station_ID" Type="int" Nullable="false" />
+    <Property Name="From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="To_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="Schedule_From_Station" Type="nvarchar" MaxLength="30" />
+    <Property Name="From_Station_Seq" Type="int" Nullable="false" />
+    <Property Name="Quota" Type="nvarchar" MaxLength="30" />
+    <Property Name="VoucherPassCode" Type="nvarchar" MaxLength="40" />
+    <Property Name="Departure_Date" Type="date" />
+    <Property Name="DepartureTime" Type="time" Precision="7" />
+    <Property Name="Train_StartDate" Type="date" />
+    <Property Name="BasicFare" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceivedFareAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefundedAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetEarning" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BookedByOperatorId" Type="int" Nullable="false" />
+    <Property Name="Booking_Type" Type="nvarchar" MaxLength="30" />
+    <Property Name="Payment_Method" Type="nvarchar" MaxLength="30" />
+    <Property Name="Payment_Mode" Type="nvarchar" MaxLength="30" />
+    <Property Name="BookedByOperatorName" Type="nvarchar" MaxLength="250" />
+    <Property Name="BookingDate" Type="date" />
+    <Property Name="BookingTime" Type="time" Precision="7" />
+    <Property Name="ReservationCenter" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Reserved" Type="bit" Nullable="false" />
+    <Property Name="BookingRemarks" Type="nvarchar" MaxLength="350" Nullable="false" />
+    <Property Name="deviceId" Type="nvarchar" MaxLength="150" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenTicketDB.dbo.TblFareDetails' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TblFareDetails">
+          <Property Name="Dep_date" Type="date" />
+          <Property Name="TrainCode" Type="nchar" MaxLength="20" />
+          <Property Name="Class" Type="nchar" MaxLength="20" />
+          <Property Name="StationFrom" Type="nchar" MaxLength="20" />
+          <Property Name="StationTo" Type="nchar" MaxLength="20" />
+          <Property Name="TicketType" Type="nchar" MaxLength="20" />
+          <Property Name="S_B" Type="varchar" MaxLength="20" />
+          <Property Name="Route_Code" Type="nchar" MaxLength="20" />
+          <Property Name="FareType" Type="nchar" MaxLength="20" />
+          <Property Name="StationFromSeq" Type="int" />
+          <Property Name="StationToSeq" Type="int" />
+          <Property Name="ConcessionTarif" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Distance" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="RoundingValue" Type="int" />
+          <Property Name="Hours" Type="int" />
+          <Property Name="Timetariff" Type="numeric" Precision="18" Scale="4" />
+          <Property Name="StationRange" Type="varchar" MaxLength="20" />
+          <Property Name="Insurence" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FinalFare" Type="decimal" Precision="9" Scale="3" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblFareRounding' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblFareRounding">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" />
+    <Property Name="RoundingOff" Type="int" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblInsurance' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblInsurance">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Insurance_Amount" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Insurance_Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Date_From" Type="date" />
+    <Property Name="Date_To" Type="date" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblMinimumFareLimit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblMinimumFareLimit">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="MinimumFareLimit" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MinimumFareLimit" Type="int" Nullable="false" />
+    <Property Name="TrainCat" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblOverwrite' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblOverwrite">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="StationFrom" />
+      <PropertyRef Name="StationTo" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Fare" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ticket_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="Todate" Type="date" />
+    <Property Name="StationFrom" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="StationTo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fare" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblOverwrite_GreenLine' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblOverwrite_GreenLine">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="StationFrom" />
+      <PropertyRef Name="StationTo" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Fare" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ticket_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="FromDate" Type="date" />
+    <Property Name="Todate" Type="date" />
+    <Property Name="StationFrom" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="StationTo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fare" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblPassFare' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblPassFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="Todate" />
+      <PropertyRef Name="LowerLeg" />
+      <PropertyRef Name="UpperLeg" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BaseFare" />
+      <PropertyRef Name="ResCharges" />
+      <PropertyRef Name="CED" />
+      <PropertyRef Name="FuelCharges" />
+      <PropertyRef Name="NonStopCharges" />
+      <PropertyRef Name="Otherharges" />
+      <PropertyRef Name="NightCharges" />
+      <PropertyRef Name="Rebate" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FromDate" Type="date" Nullable="false" />
+    <Property Name="Todate" Type="date" Nullable="false" />
+    <Property Name="LowerLeg" Type="int" Nullable="false" />
+    <Property Name="UpperLeg" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BaseFare" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="ResCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="CED" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="FuelCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NonStopCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Otherharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NightCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Rebate" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Fare_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblPassFarePIT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblPassFarePIT">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="Todate" />
+      <PropertyRef Name="LowerLeg" />
+      <PropertyRef Name="UpperLeg" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BaseFare" />
+      <PropertyRef Name="ResCharges" />
+      <PropertyRef Name="CED" />
+      <PropertyRef Name="FuelCharges" />
+      <PropertyRef Name="NonStopCharges" />
+      <PropertyRef Name="Otherharges" />
+      <PropertyRef Name="NightCharges" />
+      <PropertyRef Name="Rebate" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FromDate" Type="date" Nullable="false" />
+    <Property Name="Todate" Type="date" Nullable="false" />
+    <Property Name="LowerLeg" Type="int" Nullable="false" />
+    <Property Name="UpperLeg" Type="int" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BaseFare" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="ResCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="CED" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="FuelCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NonStopCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Otherharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NightCharges" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Rebate" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Fare_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTConcession">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ticket_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="is_adult_only" Type="bit" Nullable="false" />
+    <Property Name="seat_adult_tarrif" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="seat_child_tarrif" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="berth_adult_tarrif" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="berth_child_tarrif" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblPCTDevices' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblPCTDevices">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="device_id" />
+      <PropertyRef Name="device_type" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="device_id" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="device_type" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="last_synced" Type="datetime" />
+    <Property Name="mobile_no1" Type="nvarchar" MaxLength="25" />
+    <Property Name="mobile_no2" Type="varchar" MaxLength="25" />
+    <Property Name="division_id" Type="int" />
+    <Property Name="division_code" Type="nvarchar" MaxLength="20" />
+    <Property Name="division_name" Type="nvarchar" MaxLength="30" />
+    <Property Name="station_id" Type="int" />
+    <Property Name="station_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="station_name" Type="nchar" MaxLength="100" />
+    <Property Name="up_train_id" Type="int" />
+    <Property Name="up_train_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="up_train_name" Type="nvarchar" MaxLength="100" />
+    <Property Name="dn_train_id" Type="int" />
+    <Property Name="dn_train_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="dn_train_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="device_status" Type="nvarchar" MaxLength="50" />
+    <Property Name="fcm_id" Type="varchar" MaxLength="500" />
+    <Property Name="is_active" Type="bit" />
+    <Property Name="is_deleted" Type="bit" />
+    <Property Name="created_date" Type="datetime" />
+    <Property Name="updated_date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblPCTFare">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="train_id" Type="int" Nullable="false" />
+    <Property Name="train_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="from_id" Type="int" Nullable="false" />
+    <Property Name="from_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="to_id" Type="int" Nullable="false" />
+    <Property Name="to_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ec_seat_adult" Type="int" Nullable="false" />
+    <Property Name="ec_berth_adult" Type="int" Nullable="false" />
+    <Property Name="ec_seat_child" Type="int" Nullable="false" />
+    <Property Name="ec_berth_child" Type="int" Nullable="false" />
+    <Property Name="aclz_adult" Type="int" Nullable="false" />
+    <Property Name="aclz_child" Type="int" Nullable="false" />
+    <Property Name="acl_adult" Type="int" Nullable="false" />
+    <Property Name="acl_child" Type="int" Nullable="false" />
+    <Property Name="pc_adult" Type="int" Nullable="false" />
+    <Property Name="pc_child" Type="int" Nullable="false" />
+    <Property Name="sec_adult" Type="int" Nullable="false" />
+    <Property Name="sec_child" Type="int" Nullable="false" />
+    <Property Name="acsl_adult" Type="int" Nullable="false" />
+    <Property Name="acsl_child" Type="int" Nullable="false" />
+    <Property Name="isl_adult" Type="int" Nullable="false" />
+    <Property Name="isl_child" Type="int" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTRefund">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ticket_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="device_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cancel_date" Type="datetime" Nullable="false" />
+    <Property Name="travel_date" Type="datetime" Nullable="false" />
+    <Property Name="train_id" Type="int" Nullable="false" />
+    <Property Name="train_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="from_station_id" Type="int" Nullable="false" />
+    <Property Name="from_station_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="to_station_id" Type="int" Nullable="false" />
+    <Property Name="to_station_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ticket_code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="voucher_no" Type="nvarchar" MaxLength="30" />
+    <Property Name="cnic_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="mobile_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="adult_count" Type="int" Nullable="false" />
+    <Property Name="adult_refund" Type="int" Nullable="false" />
+    <Property Name="child_count" Type="int" Nullable="false" />
+    <Property Name="child_refund" Type="int" Nullable="false" />
+    <Property Name="total_refund" Type="int" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTRoles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ModuleName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTSales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ticket_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="device_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="booking_date" Type="datetime" Nullable="false" />
+    <Property Name="travel_date" Type="datetime" Nullable="false" />
+    <Property Name="train_id" Type="int" Nullable="false" />
+    <Property Name="train_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="from_station_id" Type="int" Nullable="false" />
+    <Property Name="from_station_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="to_station_id" Type="int" Nullable="false" />
+    <Property Name="to_station_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="adult_count" Type="int" Nullable="false" />
+    <Property Name="adult_fare" Type="int" Nullable="false" />
+    <Property Name="child_count" Type="int" Nullable="false" />
+    <Property Name="child_fare" Type="int" Nullable="false" />
+    <Property Name="ticket_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="voucher_no" Type="nvarchar" MaxLength="30" />
+    <Property Name="total_fare" Type="int" Nullable="false" />
+    <Property Name="is_canceled" Type="bit" Nullable="false" />
+    <Property Name="cnic_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="mobile_no" Type="nvarchar" MaxLength="20" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTTrains">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="train_id" Type="int" Nullable="false" />
+    <Property Name="name_en" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_ur" Type="nvarchar" MaxLength="100" />
+    <Property Name="code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="direction" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="is_reservation_train" Type="bit" Nullable="false" />
+    <Property Name="has_ec" Type="bit" Nullable="false" />
+    <Property Name="has_aclz" Type="bit" Nullable="false" />
+    <Property Name="has_acl" Type="bit" Nullable="false" />
+    <Property Name="has_pc" Type="bit" Nullable="false" />
+    <Property Name="has_sec" Type="bit" Nullable="false" />
+    <Property Name="has_acsl" Type="bit" Nullable="false" />
+    <Property Name="has_isl" Type="bit" Nullable="false" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPCTUsers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="user_station_id" Type="int" Nullable="false" />
+    <Property Name="user_station_code" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="city_Id" Type="int" />
+    <Property Name="city_code" Type="nchar" MaxLength="30" />
+    <Property Name="role_id" Type="int" />
+    <Property Name="role" Type="nchar" MaxLength="50" />
+    <Property Name="is_active" Type="bit" Nullable="false" />
+    <Property Name="is_deleted" Type="bit" Nullable="false" />
+    <Property Name="created_date" Type="datetime" Nullable="false" />
+    <Property Name="updated_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblRailStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Station_Name" Type="nvarchar" MaxLength="300" />
+    <Property Name="Station_Name_UR" Type="nvarchar" MaxLength="300" />
+    <Property Name="Alpha_Code" Type="nvarchar" MaxLength="30" />
+    <Property Name="Num_Code" Type="nvarchar" MaxLength="30" />
+    <Property Name="Station_Details" Type="nvarchar(max)" />
+    <Property Name="Is_Junction" Type="bit" />
+    <Property Name="Longitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="Station_Contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="District" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tehsil" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblStationRange' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblStationRange">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Range_Code" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="To_Station_Seq" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Range_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Route_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="From_Station_Seq" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="To_Station_Seq" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="FareType" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenTicketDB.dbo.tblTestChart' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblTestChart">
+          <Property Name="Quota" Type="nvarchar" MaxLength="30" />
+          <Property Name="GuardChartLocation" Type="nvarchar" MaxLength="20" />
+          <Property Name="Schedule_From_Station" Type="nvarchar" MaxLength="20" />
+          <Property Name="Coach_Class" Type="nvarchar" MaxLength="20" />
+          <Property Name="Coach_No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Departure_Date" Type="date" />
+          <Property Name="DepartureTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="From_Station" Type="nvarchar" MaxLength="50" />
+          <Property Name="Seat_Berth" Type="nvarchar" MaxLength="50" />
+          <Property Name="To_Station" Type="nvarchar" MaxLength="50" />
+          <Property Name="Train_Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="VoucherPassCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TicketNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="TicketCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="TicketSerialNumber" Type="nvarchar" MaxLength="30" />
+          <Property Name="Is_SearchLock" Type="bit" />
+          <Property Name="PassengerName" Type="nvarchar" MaxLength="100" />
+          <Property Name="PassengerCNIC" Type="nvarchar" MaxLength="100" />
+          <Property Name="Is_Reserved" Type="bit" />
+          <Property Name="JourneyCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="BookingRemarks" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblTicketSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblTicketSales">
+    <Key>
+      <PropertyRef Name="train_id" />
+      <PropertyRef Name="from_station_id" />
+      <PropertyRef Name="to_station_id" />
+      <PropertyRef Name="adult_count" />
+      <PropertyRef Name="adult_fare" />
+      <PropertyRef Name="child_count" />
+      <PropertyRef Name="child_fare" />
+      <PropertyRef Name="excess_fare" />
+      <PropertyRef Name="total_fare" />
+    </Key>
+    <Property Name="ticket_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="qr_id" Type="nvarchar" MaxLength="250" />
+    <Property Name="user_id" Type="nvarchar" MaxLength="20" />
+    <Property Name="device_id" Type="nvarchar" MaxLength="30" />
+    <Property Name="booking_date" Type="datetime" />
+    <Property Name="travel_date" Type="datetime" />
+    <Property Name="train_id" Type="int" Nullable="false" />
+    <Property Name="train_code" Type="nvarchar" MaxLength="10" />
+    <Property Name="from_station_id" Type="int" Nullable="false" />
+    <Property Name="from_station_code" Type="nvarchar" MaxLength="5" />
+    <Property Name="from_st_seq" Type="int" />
+    <Property Name="to_station_id" Type="int" Nullable="false" />
+    <Property Name="to_station_code" Type="nvarchar" MaxLength="5" />
+    <Property Name="coach_no" Type="nvarchar" MaxLength="5" />
+    <Property Name="class_code" Type="nvarchar" MaxLength="5" />
+    <Property Name="adult_count" Type="int" Nullable="false" />
+    <Property Name="adult_fare" Type="int" Nullable="false" />
+    <Property Name="child_count" Type="int" Nullable="false" />
+    <Property Name="child_fare" Type="int" Nullable="false" />
+    <Property Name="excess_fare" Type="int" Nullable="false" />
+    <Property Name="ticket_code" Type="nvarchar" MaxLength="5" />
+    <Property Name="voucher_no" Type="nvarchar" MaxLength="25" />
+    <Property Name="total_fare" Type="int" Nullable="false" />
+    <Property Name="passenger_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="cnic_no" Type="nvarchar" MaxLength="15" />
+    <Property Name="mobile_no" Type="nvarchar" MaxLength="15" />
+    <Property Name="seats_list" Type="nvarchar" MaxLength="50" />
+    <Property Name="with_seats" Type="int" />
+    <Property Name="is_active" Type="int" />
+    <Property Name="is_printed" Type="int" />
+    <Property Name="is_synced" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblTimePackage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblTimePackage">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="LowerTimeLimit" />
+      <PropertyRef Name="UpperTimeLimit" />
+      <PropertyRef Name="Tariff" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ticket_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="LowerTimeLimit" Type="int" Nullable="false" />
+    <Property Name="UpperTimeLimit" Type="int" Nullable="false" />
+    <Property Name="Tariff" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblTrainCategory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblTrainCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TrainCat" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="TrainCat" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="TrainCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="date" Nullable="false" />
+    <Property Name="Updated_Date" Type="date" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblTrainClassFare' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblTrainClassFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" />
+    <Property Name="FareType" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.tblTrainClassRangeFare' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblTrainClassRangeFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Range_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fare_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblTrainRoute' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblTrainRoute">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Route_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTrains">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Train_Name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Train_Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Direction" Type="varchar" MaxLength="6" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="Show_In_WebTT" Type="bit" Nullable="false" />
+    <Property Name="Show_In_ETicket" Type="bit" Nullable="false" />
+    <Property Name="Show_In_Res" Type="bit" Nullable="false" />
+    <Property Name="Show_In_ResAdmin" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblTrainTiming">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Train_ID" Type="int" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Station_ID" Type="int" />
+    <Property Name="Station_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Station_Code" Type="nvarchar" MaxLength="30" />
+    <Property Name="Num_Code" Type="nvarchar" MaxLength="20" />
+    <Property Name="Distance_Km" Type="int" />
+    <Property Name="Arrival" Type="time" Precision="7" />
+    <Property Name="Departure" Type="time" Precision="7" />
+    <Property Name="Old_Train_ID" Type="int" />
+    <Property Name="Day_Add" Type="int" />
+    <Property Name="Station_Sequence" Type="int" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="AlternateTimeArrival" Type="time" Precision="7" />
+    <Property Name="AlternateTimeDeparture" Type="time" Precision="7" />
+    <Property Name="NormalTimeEFrom" Type="date" />
+    <Property Name="NormalTimeETo" Type="date" />
+    <Property Name="Alternate_Day_Add" Type="int" />
+    <Property Name="StationEFromDate" Type="date" />
+    <Property Name="StationEToDate" Type="date" />
+    <Property Name="GuardChartLocation" Type="nvarchar" MaxLength="10" />
+    <Property Name="IsQoutaOnly" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OpenTicketDB.dbo.TblValidTrainClassTick' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblValidTrainClassTick">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="Is_SeatCode" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Train_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ticket_Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Is_SeatCode" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Created_Date" Type="datetime" Nullable="false" />
+    <Property Name="Updated_Date" Type="datetime" Nullable="false" />
+    <Property Name="TimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'OpenTicketDB.dbo.TRAILFARELHRRWPPSC' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TRAILFARELHRRWPPSC">
+          <Property Name="ID" Type="float" />
+          <Property Name="FromDate" Type="datetime" />
+          <Property Name="Todate" Type="datetime" />
+          <Property Name="LowerLeg" Type="float" />
+          <Property Name="UpperLeg" Type="float" />
+          <Property Name="Class" Type="nvarchar" MaxLength="255" />
+          <Property Name="BaseFare" Type="float" />
+          <Property Name="ResCharges" Type="float" />
+          <Property Name="CED" Type="float" />
+          <Property Name="FuelCharges" Type="float" />
+          <Property Name="NonStopCharges" Type="float" />
+          <Property Name="Otherharges" Type="float" />
+          <Property Name="NightCharges" Type="float" />
+          <Property Name="Rebate" Type="float" />
+          <Property Name="Fare_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Is_Active" Type="float" />
+          <Property Name="Is_Deleted" Type="float" />
+          <Property Name="Created_Date" Type="datetime" />
+          <Property Name="Updated_Date" Type="datetime" />
+          <Property Name="TimeStamp" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_tblTrainTiming_tblTrains' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_tblTrainTiming_tblTrains" />-->
+  <Function Name="DepTimeStationWiseTrainCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="time">
+    <Parameter Name="trainCode" Type="varchar" Mode="In" />
+    <Parameter Name="dt" Type="datetime" Mode="In" />
+    <Parameter Name="station" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Create_Update_PCTDevice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="device_id" Type="varchar" Mode="In" />
+    <Parameter Name="station_id" Type="int" Mode="In" />
+    <Parameter Name="station_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="station_name" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Create_Update_PCTDevice_Backup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="deviceId" Type="nvarchar" Mode="In" />
+    <Parameter Name="fcmId" Type="nvarchar" Mode="In" />
+    <Parameter Name="msisdn1" Type="nvarchar" Mode="In" />
+    <Parameter Name="msisdn2" Type="nvarchar" Mode="In" />
+    <Parameter Name="stationId" Type="int" Mode="In" />
+    <Parameter Name="Station" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Create_Update_PCTUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="pctUserId" Type="int" Mode="In" />
+    <Parameter Name="userId" Type="nvarchar" Mode="In" />
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="cityId" Type="int" Mode="In" />
+    <Parameter Name="cityCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="roleId" Type="int" Mode="In" />
+    <Parameter Name="Role" Type="nvarchar" Mode="In" />
+    <Parameter Name="stationId" Type="int" Mode="In" />
+    <Parameter Name="Station" Type="nvarchar" Mode="In" />
+    <Parameter Name="isActive" Type="bit" Mode="In" />
+    <Parameter Name="isInsert" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_Create_Update_PCTUserRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserRoleId" Type="int" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="Module" Type="nvarchar" Mode="In" />
+    <Parameter Name="isActive" Type="bit" Mode="In" />
+    <Parameter Name="isInsert" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="sp_FareCal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DepDate" Type="date" Mode="In" />
+    <Parameter Name="TrainCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Class" Type="nvarchar" Mode="In" />
+    <Parameter Name="StationFrom" Type="nvarchar" Mode="In" />
+    <Parameter Name="StationTo" Type="nvarchar" Mode="In" />
+    <Parameter Name="TickType" Type="nvarchar" Mode="In" />
+    <Parameter Name="S_B" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Get_PCTRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_Get_PCTUsreList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_PCTUser_Authentication" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_Register_PCTDevice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="device_id" Type="nvarchar" Mode="In" />
+    <Parameter Name="device_type" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile_no1" Type="nvarchar" Mode="In" />
+    <Parameter Name="mobile_no2" Type="varchar" Mode="In" />
+    <Parameter Name="division_id" Type="int" Mode="In" />
+    <Parameter Name="division_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="division_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="station_id" Type="int" Mode="In" />
+    <Parameter Name="station_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="station_name" Type="nchar" Mode="In" />
+    <Parameter Name="up_train_id" Type="int" Mode="In" />
+    <Parameter Name="up_train_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="up_train_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="dn_train_id" Type="int" Mode="In" />
+    <Parameter Name="dn_train_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="dn_train_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="device_status" Type="nvarchar" Mode="In" />
+    <Parameter Name="fcm_id" Type="varchar" Mode="In" />
+    <Parameter Name="is_active" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="SP_Update_PCTDevice_Train" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="device_id" Type="varchar" Mode="In" />
+    <Parameter Name="up_train_id" Type="int" Mode="In" />
+    <Parameter Name="up_train_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="up_train_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="dn_train_id" Type="int" Mode="In" />
+    <Parameter Name="dn_train_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="dn_train_name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_Rpt_GetGaurdChart_EFT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departuredate" Type="datetime" Mode="In" />
+    <Parameter Name="trainid" Type="int" Mode="In" />
+    <Parameter Name="stationcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="classcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="coach" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_Rpt_GetGaurdChart_EFT_OT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departuredate" Type="datetime" Mode="In" />
+    <Parameter Name="trainid" Type="int" Mode="In" />
+    <Parameter Name="stationcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="classcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="coach" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="USP_Rpt_GetGaurdChart_EFT_OT_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="departuredate" Type="datetime" Mode="In" />
+    <Parameter Name="trainid" Type="int" Mode="In" />
+    <Parameter Name="stationcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="classcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="coach" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="OpenTicketDBModelStoreContainer">
+    <EntitySet Name="tblCurrentCounter" EntityType="Self.tblCurrentCounter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTConcession" EntityType="Self.tblPCTConcession" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTFare" EntityType="Self.tblPCTFare" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTRefund" EntityType="Self.tblPCTRefund" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTRoles" EntityType="Self.tblPCTRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTSales" EntityType="Self.tblPCTSales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTTrains" EntityType="Self.tblPCTTrains" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPCTUsers" EntityType="Self.tblPCTUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRailStation" EntityType="Self.tblRailStation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrains" EntityType="Self.tblTrains" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrainTiming" EntityType="Self.tblTrainTiming" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="gaurdchart" EntityType="Self.gaurdchart" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[gaurdchart].[Reservation_ID] AS [Reservation_ID], 
+[gaurdchart].[Train_ID] AS [Train_ID], 
+[gaurdchart].[Train_Code] AS [Train_Code], 
+[gaurdchart].[Train_Name] AS [Train_Name], 
+[gaurdchart].[Coach_Class] AS [Coach_Class], 
+[gaurdchart].[ClassId] AS [ClassId], 
+[gaurdchart].[Coach_No] AS [Coach_No], 
+[gaurdchart].[Seat_Berth] AS [Seat_Berth], 
+[gaurdchart].[TicketNumber] AS [TicketNumber], 
+[gaurdchart].[TicketCode] AS [TicketCode], 
+[gaurdchart].[TicketSerialNumber] AS [TicketSerialNumber], 
+[gaurdchart].[PassengerName] AS [PassengerName], 
+[gaurdchart].[PassengerCNIC] AS [PassengerCNIC], 
+[gaurdchart].[GuardChartLocation] AS [GuardChartLocation], 
+[gaurdchart].[To_Station_ID] AS [To_Station_ID], 
+[gaurdchart].[From_Station_ID] AS [From_Station_ID], 
+[gaurdchart].[From_Station] AS [From_Station], 
+[gaurdchart].[To_Station] AS [To_Station], 
+[gaurdchart].[Schedule_From_Station] AS [Schedule_From_Station], 
+[gaurdchart].[From_Station_Seq] AS [From_Station_Seq], 
+[gaurdchart].[Quota] AS [Quota], 
+[gaurdchart].[VoucherPassCode] AS [VoucherPassCode], 
+[gaurdchart].[Departure_Date] AS [Departure_Date], 
+[gaurdchart].[DepartureTime] AS [DepartureTime], 
+[gaurdchart].[Booking_Type] AS [Booking_Type], 
+[gaurdchart].[PaymentType] AS [PaymentType], 
+[gaurdchart].[CCPaymentCode] AS [CCPaymentCode], 
+[gaurdchart].[Train_StartDate] AS [Train_StartDate], 
+[gaurdchart].[Is_SearchLock] AS [Is_SearchLock], 
+[gaurdchart].[Is_Reserved] AS [Is_Reserved], 
+[gaurdchart].[BookingRemarks] AS [BookingRemarks], 
+[gaurdchart].[Is_Active] AS [Is_Active], 
+[gaurdchart].[Is_Deleted] AS [Is_Deleted], 
+[gaurdchart].[Created_Date] AS [Created_Date], 
+[gaurdchart].[Updated_Date] AS [Updated_Date]
+FROM [dbo].[gaurdchart] AS [gaurdchart]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblBerthCharges" EntityType="Self.TblBerthCharges" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblBerthCharges].[ID] AS [ID], 
+[TblBerthCharges].[TrainCat] AS [TrainCat], 
+[TblBerthCharges].[LowerLegDist] AS [LowerLegDist], 
+[TblBerthCharges].[UpperLegDist] AS [UpperLegDist], 
+[TblBerthCharges].[Class] AS [Class], 
+[TblBerthCharges].[BerthCharges] AS [BerthCharges], 
+[TblBerthCharges].[Is_Active] AS [Is_Active], 
+[TblBerthCharges].[Is_Deleted] AS [Is_Deleted], 
+[TblBerthCharges].[Created_Date] AS [Created_Date], 
+[TblBerthCharges].[Update_Date] AS [Update_Date], 
+[TblBerthCharges].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblBerthCharges] AS [TblBerthCharges]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblConcessionTick" EntityType="Self.TblConcessionTick" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblConcessionTick].[ID] AS [ID], 
+[TblConcessionTick].[Ticket_Code] AS [Ticket_Code], 
+[TblConcessionTick].[Description] AS [Description], 
+[TblConcessionTick].[Tariff] AS [Tariff], 
+[TblConcessionTick].[Is_Active] AS [Is_Active], 
+[TblConcessionTick].[Is_Deleted] AS [Is_Deleted], 
+[TblConcessionTick].[Created_Date] AS [Created_Date], 
+[TblConcessionTick].[Updated_Date] AS [Updated_Date], 
+[TblConcessionTick].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblConcessionTick] AS [TblConcessionTick]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblCurrentSales" EntityType="Self.tblCurrentSales" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblCurrentSales].[Reservation_ID] AS [Reservation_ID], 
+[tblCurrentSales].[Train_ID] AS [Train_ID], 
+[tblCurrentSales].[Train_Code] AS [Train_Code], 
+[tblCurrentSales].[Train_Name] AS [Train_Name], 
+[tblCurrentSales].[Coach_Class] AS [Coach_Class], 
+[tblCurrentSales].[ClassId] AS [ClassId], 
+[tblCurrentSales].[Coach_No] AS [Coach_No], 
+[tblCurrentSales].[Seat_Berth] AS [Seat_Berth], 
+[tblCurrentSales].[TicketNumber] AS [TicketNumber], 
+[tblCurrentSales].[TicketCode] AS [TicketCode], 
+[tblCurrentSales].[TicketSerialNumber] AS [TicketSerialNumber], 
+[tblCurrentSales].[PassengerName] AS [PassengerName], 
+[tblCurrentSales].[PassengerCNIC] AS [PassengerCNIC], 
+[tblCurrentSales].[GuardChartLocation] AS [GuardChartLocation], 
+[tblCurrentSales].[To_Station_ID] AS [To_Station_ID], 
+[tblCurrentSales].[From_Station_ID] AS [From_Station_ID], 
+[tblCurrentSales].[From_Station] AS [From_Station], 
+[tblCurrentSales].[To_Station] AS [To_Station], 
+[tblCurrentSales].[Schedule_From_Station] AS [Schedule_From_Station], 
+[tblCurrentSales].[From_Station_Seq] AS [From_Station_Seq], 
+[tblCurrentSales].[Quota] AS [Quota], 
+[tblCurrentSales].[VoucherPassCode] AS [VoucherPassCode], 
+[tblCurrentSales].[Departure_Date] AS [Departure_Date], 
+[tblCurrentSales].[DepartureTime] AS [DepartureTime], 
+[tblCurrentSales].[Train_StartDate] AS [Train_StartDate], 
+[tblCurrentSales].[BasicFare] AS [BasicFare], 
+[tblCurrentSales].[ReceivedFareAmount] AS [ReceivedFareAmount], 
+[tblCurrentSales].[RefundedAmount] AS [RefundedAmount], 
+[tblCurrentSales].[NetEarning] AS [NetEarning], 
+[tblCurrentSales].[BookedByOperatorId] AS [BookedByOperatorId], 
+[tblCurrentSales].[BookedByOperatorName] AS [BookedByOperatorName], 
+[tblCurrentSales].[BookingDate] AS [BookingDate], 
+[tblCurrentSales].[BookingTime] AS [BookingTime], 
+[tblCurrentSales].[ReservationCenter] AS [ReservationCenter], 
+[tblCurrentSales].[Is_Reserved] AS [Is_Reserved], 
+[tblCurrentSales].[BookingRemarks] AS [BookingRemarks], 
+[tblCurrentSales].[Booking_Type] AS [Booking_Type], 
+[tblCurrentSales].[Payment_Method] AS [Payment_Method], 
+[tblCurrentSales].[Payment_Mode] AS [Payment_Mode], 
+[tblCurrentSales].[IsCancelled] AS [IsCancelled], 
+[tblCurrentSales].[CancellationType] AS [CancellationType], 
+[tblCurrentSales].[CancellationRemarks] AS [CancellationRemarks], 
+[tblCurrentSales].[CancellationDate] AS [CancellationDate], 
+[tblCurrentSales].[CancelledByOperatorId] AS [CancelledByOperatorId], 
+[tblCurrentSales].[CancelledByOperatorName] AS [CancelledByOperatorName], 
+[tblCurrentSales].[deviceId] AS [deviceId], 
+[tblCurrentSales].[Is_Active] AS [Is_Active], 
+[tblCurrentSales].[Is_Deleted] AS [Is_Deleted], 
+[tblCurrentSales].[Created_Date] AS [Created_Date], 
+[tblCurrentSales].[Updated_Date] AS [Updated_Date]
+FROM [dbo].[tblCurrentSales] AS [tblCurrentSales]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblDeviceUsers" EntityType="Self.tblDeviceUsers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblDeviceUsers].[id] AS [id], 
+[tblDeviceUsers].[employee_no] AS [employee_no], 
+[tblDeviceUsers].[password] AS [password], 
+[tblDeviceUsers].[employee_nam] AS [employee_nam], 
+[tblDeviceUsers].[employee_cnic] AS [employee_cnic], 
+[tblDeviceUsers].[division] AS [division], 
+[tblDeviceUsers].[employee_mobile] AS [employee_mobile], 
+[tblDeviceUsers].[designation] AS [designation], 
+[tblDeviceUsers].[scale] AS [scale], 
+[tblDeviceUsers].[remarks] AS [remarks], 
+[tblDeviceUsers].[employee_station] AS [employee_station], 
+[tblDeviceUsers].[employee_role] AS [employee_role], 
+[tblDeviceUsers].[is_active] AS [is_active], 
+[tblDeviceUsers].[is_deleted] AS [is_deleted], 
+[tblDeviceUsers].[created_date] AS [created_date], 
+[tblDeviceUsers].[updated_date] AS [updated_date]
+FROM [dbo].[tblDeviceUsers] AS [tblDeviceUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblDistanceDir" EntityType="Self.TblDistanceDir" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblDistanceDir].[ID] AS [ID], 
+[TblDistanceDir].[Route_Code] AS [Route_Code], 
+[TblDistanceDir].[Station_Code] AS [Station_Code], 
+[TblDistanceDir].[Inter_Station_Distance] AS [Inter_Station_Distance], 
+[TblDistanceDir].[Distance] AS [Distance], 
+[TblDistanceDir].[StationSequnce] AS [StationSequnce], 
+[TblDistanceDir].[Is_Active] AS [Is_Active], 
+[TblDistanceDir].[Is_Deleted] AS [Is_Deleted], 
+[TblDistanceDir].[Created_Date] AS [Created_Date], 
+[TblDistanceDir].[Updated_Date] AS [Updated_Date], 
+[TblDistanceDir].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblDistanceDir] AS [TblDistanceDir]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblEFTSales" EntityType="Self.tblEFTSales" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblEFTSales].[Reservation_ID] AS [Reservation_ID], 
+[tblEFTSales].[Train_ID] AS [Train_ID], 
+[tblEFTSales].[Train_Code] AS [Train_Code], 
+[tblEFTSales].[Train_Name] AS [Train_Name], 
+[tblEFTSales].[Coach_Class] AS [Coach_Class], 
+[tblEFTSales].[ClassId] AS [ClassId], 
+[tblEFTSales].[Coach_No] AS [Coach_No], 
+[tblEFTSales].[Seat_Berth] AS [Seat_Berth], 
+[tblEFTSales].[TicketNumber] AS [TicketNumber], 
+[tblEFTSales].[TicketCode] AS [TicketCode], 
+[tblEFTSales].[TicketSerialNumber] AS [TicketSerialNumber], 
+[tblEFTSales].[PassengerName] AS [PassengerName], 
+[tblEFTSales].[PassengerCNIC] AS [PassengerCNIC], 
+[tblEFTSales].[To_Station_ID] AS [To_Station_ID], 
+[tblEFTSales].[From_Station_ID] AS [From_Station_ID], 
+[tblEFTSales].[From_Station] AS [From_Station], 
+[tblEFTSales].[To_Station] AS [To_Station], 
+[tblEFTSales].[Schedule_From_Station] AS [Schedule_From_Station], 
+[tblEFTSales].[From_Station_Seq] AS [From_Station_Seq], 
+[tblEFTSales].[Quota] AS [Quota], 
+[tblEFTSales].[VoucherPassCode] AS [VoucherPassCode], 
+[tblEFTSales].[Departure_Date] AS [Departure_Date], 
+[tblEFTSales].[DepartureTime] AS [DepartureTime], 
+[tblEFTSales].[Train_StartDate] AS [Train_StartDate], 
+[tblEFTSales].[BasicFare] AS [BasicFare], 
+[tblEFTSales].[ReceivedFareAmount] AS [ReceivedFareAmount], 
+[tblEFTSales].[RefundedAmount] AS [RefundedAmount], 
+[tblEFTSales].[NetEarning] AS [NetEarning], 
+[tblEFTSales].[BookedByOperatorId] AS [BookedByOperatorId], 
+[tblEFTSales].[Booking_Type] AS [Booking_Type], 
+[tblEFTSales].[Payment_Method] AS [Payment_Method], 
+[tblEFTSales].[Payment_Mode] AS [Payment_Mode], 
+[tblEFTSales].[BookedByOperatorName] AS [BookedByOperatorName], 
+[tblEFTSales].[BookingDate] AS [BookingDate], 
+[tblEFTSales].[BookingTime] AS [BookingTime], 
+[tblEFTSales].[ReservationCenter] AS [ReservationCenter], 
+[tblEFTSales].[Is_Reserved] AS [Is_Reserved], 
+[tblEFTSales].[BookingRemarks] AS [BookingRemarks], 
+[tblEFTSales].[deviceId] AS [deviceId], 
+[tblEFTSales].[Is_Active] AS [Is_Active], 
+[tblEFTSales].[Is_Deleted] AS [Is_Deleted], 
+[tblEFTSales].[Created_Date] AS [Created_Date], 
+[tblEFTSales].[Updated_Date] AS [Updated_Date]
+FROM [dbo].[tblEFTSales] AS [tblEFTSales]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblFareRounding" EntityType="Self.TblFareRounding" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblFareRounding].[ID] AS [ID], 
+[TblFareRounding].[Class] AS [Class], 
+[TblFareRounding].[RoundingOff] AS [RoundingOff], 
+[TblFareRounding].[Is_Active] AS [Is_Active], 
+[TblFareRounding].[Is_Deleted] AS [Is_Deleted], 
+[TblFareRounding].[Created_Date] AS [Created_Date], 
+[TblFareRounding].[Updated_Date] AS [Updated_Date], 
+[TblFareRounding].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblFareRounding] AS [TblFareRounding]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblInsurance" EntityType="Self.TblInsurance" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblInsurance].[ID] AS [ID], 
+[TblInsurance].[Insurance_Amount] AS [Insurance_Amount], 
+[TblInsurance].[Date_From] AS [Date_From], 
+[TblInsurance].[Date_To] AS [Date_To], 
+[TblInsurance].[Is_Active] AS [Is_Active], 
+[TblInsurance].[Is_Deleted] AS [Is_Deleted], 
+[TblInsurance].[Created_Date] AS [Created_Date], 
+[TblInsurance].[Updated_Date] AS [Updated_Date], 
+[TblInsurance].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblInsurance] AS [TblInsurance]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblMinimumFareLimit" EntityType="Self.TblMinimumFareLimit" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblMinimumFareLimit].[ID] AS [ID], 
+[TblMinimumFareLimit].[Class] AS [Class], 
+[TblMinimumFareLimit].[MinimumFareLimit] AS [MinimumFareLimit], 
+[TblMinimumFareLimit].[TrainCat] AS [TrainCat], 
+[TblMinimumFareLimit].[Is_Active] AS [Is_Active], 
+[TblMinimumFareLimit].[Is_Deleted] AS [Is_Deleted], 
+[TblMinimumFareLimit].[Created_Date] AS [Created_Date], 
+[TblMinimumFareLimit].[Updated_Date] AS [Updated_Date], 
+[TblMinimumFareLimit].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblMinimumFareLimit] AS [TblMinimumFareLimit]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblOverwrite" EntityType="Self.TblOverwrite" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblOverwrite].[ID] AS [ID], 
+[TblOverwrite].[Train_Code] AS [Train_Code], 
+[TblOverwrite].[Ticket_Code] AS [Ticket_Code], 
+[TblOverwrite].[FromDate] AS [FromDate], 
+[TblOverwrite].[Todate] AS [Todate], 
+[TblOverwrite].[StationFrom] AS [StationFrom], 
+[TblOverwrite].[StationTo] AS [StationTo], 
+[TblOverwrite].[Class] AS [Class], 
+[TblOverwrite].[Fare] AS [Fare], 
+[TblOverwrite].[Is_Active] AS [Is_Active], 
+[TblOverwrite].[Is_Deleted] AS [Is_Deleted], 
+[TblOverwrite].[Created_Date] AS [Created_Date], 
+[TblOverwrite].[Updated_Date] AS [Updated_Date], 
+[TblOverwrite].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblOverwrite] AS [TblOverwrite]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblOverwrite_GreenLine" EntityType="Self.TblOverwrite_GreenLine" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblOverwrite_GreenLine].[ID] AS [ID], 
+[TblOverwrite_GreenLine].[Train_Code] AS [Train_Code], 
+[TblOverwrite_GreenLine].[Ticket_Code] AS [Ticket_Code], 
+[TblOverwrite_GreenLine].[FromDate] AS [FromDate], 
+[TblOverwrite_GreenLine].[Todate] AS [Todate], 
+[TblOverwrite_GreenLine].[StationFrom] AS [StationFrom], 
+[TblOverwrite_GreenLine].[StationTo] AS [StationTo], 
+[TblOverwrite_GreenLine].[Class] AS [Class], 
+[TblOverwrite_GreenLine].[Fare] AS [Fare], 
+[TblOverwrite_GreenLine].[Is_Active] AS [Is_Active], 
+[TblOverwrite_GreenLine].[Is_Deleted] AS [Is_Deleted], 
+[TblOverwrite_GreenLine].[Created_Date] AS [Created_Date], 
+[TblOverwrite_GreenLine].[Updated_Date] AS [Updated_Date], 
+[TblOverwrite_GreenLine].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblOverwrite_GreenLine] AS [TblOverwrite_GreenLine]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblPassFare" EntityType="Self.TblPassFare" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblPassFare].[ID] AS [ID], 
+[TblPassFare].[FromDate] AS [FromDate], 
+[TblPassFare].[Todate] AS [Todate], 
+[TblPassFare].[LowerLeg] AS [LowerLeg], 
+[TblPassFare].[UpperLeg] AS [UpperLeg], 
+[TblPassFare].[Class] AS [Class], 
+[TblPassFare].[BaseFare] AS [BaseFare], 
+[TblPassFare].[ResCharges] AS [ResCharges], 
+[TblPassFare].[CED] AS [CED], 
+[TblPassFare].[FuelCharges] AS [FuelCharges], 
+[TblPassFare].[NonStopCharges] AS [NonStopCharges], 
+[TblPassFare].[Otherharges] AS [Otherharges], 
+[TblPassFare].[NightCharges] AS [NightCharges], 
+[TblPassFare].[Rebate] AS [Rebate], 
+[TblPassFare].[Fare_Type] AS [Fare_Type], 
+[TblPassFare].[Is_Active] AS [Is_Active], 
+[TblPassFare].[Is_Deleted] AS [Is_Deleted], 
+[TblPassFare].[Created_Date] AS [Created_Date], 
+[TblPassFare].[Updated_Date] AS [Updated_Date], 
+[TblPassFare].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblPassFare] AS [TblPassFare]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblPassFarePIT" EntityType="Self.TblPassFarePIT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblPassFarePIT].[ID] AS [ID], 
+[TblPassFarePIT].[FromDate] AS [FromDate], 
+[TblPassFarePIT].[Todate] AS [Todate], 
+[TblPassFarePIT].[LowerLeg] AS [LowerLeg], 
+[TblPassFarePIT].[UpperLeg] AS [UpperLeg], 
+[TblPassFarePIT].[Class] AS [Class], 
+[TblPassFarePIT].[BaseFare] AS [BaseFare], 
+[TblPassFarePIT].[ResCharges] AS [ResCharges], 
+[TblPassFarePIT].[CED] AS [CED], 
+[TblPassFarePIT].[FuelCharges] AS [FuelCharges], 
+[TblPassFarePIT].[NonStopCharges] AS [NonStopCharges], 
+[TblPassFarePIT].[Otherharges] AS [Otherharges], 
+[TblPassFarePIT].[NightCharges] AS [NightCharges], 
+[TblPassFarePIT].[Rebate] AS [Rebate], 
+[TblPassFarePIT].[Fare_Type] AS [Fare_Type], 
+[TblPassFarePIT].[Is_Active] AS [Is_Active], 
+[TblPassFarePIT].[Is_Deleted] AS [Is_Deleted], 
+[TblPassFarePIT].[Created_Date] AS [Created_Date], 
+[TblPassFarePIT].[Updated_Date] AS [Updated_Date], 
+[TblPassFarePIT].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblPassFarePIT] AS [TblPassFarePIT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblPCTDevices" EntityType="Self.tblPCTDevices" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblPCTDevices].[id] AS [id], 
+[tblPCTDevices].[device_id] AS [device_id], 
+[tblPCTDevices].[device_type] AS [device_type], 
+[tblPCTDevices].[last_synced] AS [last_synced], 
+[tblPCTDevices].[mobile_no1] AS [mobile_no1], 
+[tblPCTDevices].[mobile_no2] AS [mobile_no2], 
+[tblPCTDevices].[division_id] AS [division_id], 
+[tblPCTDevices].[division_code] AS [division_code], 
+[tblPCTDevices].[division_name] AS [division_name], 
+[tblPCTDevices].[station_id] AS [station_id], 
+[tblPCTDevices].[station_code] AS [station_code], 
+[tblPCTDevices].[station_name] AS [station_name], 
+[tblPCTDevices].[up_train_id] AS [up_train_id], 
+[tblPCTDevices].[up_train_code] AS [up_train_code], 
+[tblPCTDevices].[up_train_name] AS [up_train_name], 
+[tblPCTDevices].[dn_train_id] AS [dn_train_id], 
+[tblPCTDevices].[dn_train_code] AS [dn_train_code], 
+[tblPCTDevices].[dn_train_name] AS [dn_train_name], 
+[tblPCTDevices].[device_status] AS [device_status], 
+[tblPCTDevices].[fcm_id] AS [fcm_id], 
+[tblPCTDevices].[is_active] AS [is_active], 
+[tblPCTDevices].[is_deleted] AS [is_deleted], 
+[tblPCTDevices].[created_date] AS [created_date], 
+[tblPCTDevices].[updated_date] AS [updated_date]
+FROM [dbo].[tblPCTDevices] AS [tblPCTDevices]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblStationRange" EntityType="Self.TblStationRange" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblStationRange].[ID] AS [ID], 
+[TblStationRange].[Range_Code] AS [Range_Code], 
+[TblStationRange].[Route_Code] AS [Route_Code], 
+[TblStationRange].[From_Station_Seq] AS [From_Station_Seq], 
+[TblStationRange].[To_Station_Seq] AS [To_Station_Seq], 
+[TblStationRange].[FareType] AS [FareType], 
+[TblStationRange].[Is_Active] AS [Is_Active], 
+[TblStationRange].[Is_Deleted] AS [Is_Deleted], 
+[TblStationRange].[Created_Date] AS [Created_Date], 
+[TblStationRange].[Updated_Date] AS [Updated_Date], 
+[TblStationRange].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblStationRange] AS [TblStationRange]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblTicketSales" EntityType="Self.tblTicketSales" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblTicketSales].[ticket_id] AS [ticket_id], 
+[tblTicketSales].[qr_id] AS [qr_id], 
+[tblTicketSales].[user_id] AS [user_id], 
+[tblTicketSales].[device_id] AS [device_id], 
+[tblTicketSales].[booking_date] AS [booking_date], 
+[tblTicketSales].[travel_date] AS [travel_date], 
+[tblTicketSales].[train_id] AS [train_id], 
+[tblTicketSales].[train_code] AS [train_code], 
+[tblTicketSales].[from_station_id] AS [from_station_id], 
+[tblTicketSales].[from_station_code] AS [from_station_code], 
+[tblTicketSales].[from_st_seq] AS [from_st_seq], 
+[tblTicketSales].[to_station_id] AS [to_station_id], 
+[tblTicketSales].[to_station_code] AS [to_station_code], 
+[tblTicketSales].[coach_no] AS [coach_no], 
+[tblTicketSales].[class_code] AS [class_code], 
+[tblTicketSales].[adult_count] AS [adult_count], 
+[tblTicketSales].[adult_fare] AS [adult_fare], 
+[tblTicketSales].[child_count] AS [child_count], 
+[tblTicketSales].[child_fare] AS [child_fare], 
+[tblTicketSales].[excess_fare] AS [excess_fare], 
+[tblTicketSales].[ticket_code] AS [ticket_code], 
+[tblTicketSales].[voucher_no] AS [voucher_no], 
+[tblTicketSales].[total_fare] AS [total_fare], 
+[tblTicketSales].[passenger_name] AS [passenger_name], 
+[tblTicketSales].[cnic_no] AS [cnic_no], 
+[tblTicketSales].[mobile_no] AS [mobile_no], 
+[tblTicketSales].[seats_list] AS [seats_list], 
+[tblTicketSales].[with_seats] AS [with_seats], 
+[tblTicketSales].[is_active] AS [is_active], 
+[tblTicketSales].[is_printed] AS [is_printed], 
+[tblTicketSales].[is_synced] AS [is_synced]
+FROM [dbo].[tblTicketSales] AS [tblTicketSales]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblTimePackage" EntityType="Self.TblTimePackage" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblTimePackage].[ID] AS [ID], 
+[TblTimePackage].[Train_Code] AS [Train_Code], 
+[TblTimePackage].[Class] AS [Class], 
+[TblTimePackage].[Ticket_Code] AS [Ticket_Code], 
+[TblTimePackage].[LowerTimeLimit] AS [LowerTimeLimit], 
+[TblTimePackage].[UpperTimeLimit] AS [UpperTimeLimit], 
+[TblTimePackage].[Tariff] AS [Tariff], 
+[TblTimePackage].[Is_Active] AS [Is_Active], 
+[TblTimePackage].[Is_Deleted] AS [Is_Deleted], 
+[TblTimePackage].[Created_Date] AS [Created_Date], 
+[TblTimePackage].[Updated_Date] AS [Updated_Date], 
+[TblTimePackage].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblTimePackage] AS [TblTimePackage]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblTrainCategory" EntityType="Self.TblTrainCategory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblTrainCategory].[ID] AS [ID], 
+[TblTrainCategory].[TrainCat] AS [TrainCat], 
+[TblTrainCategory].[TrainCode] AS [TrainCode], 
+[TblTrainCategory].[Is_Active] AS [Is_Active], 
+[TblTrainCategory].[Is_Deleted] AS [Is_Deleted], 
+[TblTrainCategory].[Created_Date] AS [Created_Date], 
+[TblTrainCategory].[Updated_Date] AS [Updated_Date], 
+[TblTrainCategory].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblTrainCategory] AS [TblTrainCategory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblTrainClassFare" EntityType="Self.TblTrainClassFare" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblTrainClassFare].[ID] AS [ID], 
+[TblTrainClassFare].[Train_Code] AS [Train_Code], 
+[TblTrainClassFare].[Class] AS [Class], 
+[TblTrainClassFare].[FareType] AS [FareType], 
+[TblTrainClassFare].[Is_Active] AS [Is_Active], 
+[TblTrainClassFare].[Is_Deleted] AS [Is_Deleted], 
+[TblTrainClassFare].[Created_Date] AS [Created_Date], 
+[TblTrainClassFare].[Updated_Date] AS [Updated_Date], 
+[TblTrainClassFare].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblTrainClassFare] AS [TblTrainClassFare]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="tblTrainClassRangeFare" EntityType="Self.tblTrainClassRangeFare" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[tblTrainClassRangeFare].[ID] AS [ID], 
+[tblTrainClassRangeFare].[Train_Code] AS [Train_Code], 
+[tblTrainClassRangeFare].[Range_Code] AS [Range_Code], 
+[tblTrainClassRangeFare].[Class] AS [Class], 
+[tblTrainClassRangeFare].[Fare_Type] AS [Fare_Type], 
+[tblTrainClassRangeFare].[Is_Active] AS [Is_Active], 
+[tblTrainClassRangeFare].[Is_Deleted] AS [Is_Deleted], 
+[tblTrainClassRangeFare].[Created_Date] AS [Created_Date], 
+[tblTrainClassRangeFare].[Updated_Date] AS [Updated_Date], 
+[tblTrainClassRangeFare].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[tblTrainClassRangeFare] AS [tblTrainClassRangeFare]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblTrainRoute" EntityType="Self.TblTrainRoute" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblTrainRoute].[ID] AS [ID], 
+[TblTrainRoute].[Train_Code] AS [Train_Code], 
+[TblTrainRoute].[Route_Code] AS [Route_Code], 
+[TblTrainRoute].[Is_Active] AS [Is_Active], 
+[TblTrainRoute].[Is_Deleted] AS [Is_Deleted], 
+[TblTrainRoute].[Created_Date] AS [Created_Date], 
+[TblTrainRoute].[Updated_Date] AS [Updated_Date], 
+[TblTrainRoute].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblTrainRoute] AS [TblTrainRoute]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblValidTrainClassTick" EntityType="Self.TblValidTrainClassTick" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[TblValidTrainClassTick].[ID] AS [ID], 
+[TblValidTrainClassTick].[Train_Code] AS [Train_Code], 
+[TblValidTrainClassTick].[Class] AS [Class], 
+[TblValidTrainClassTick].[Ticket_Code] AS [Ticket_Code], 
+[TblValidTrainClassTick].[Is_SeatCode] AS [Is_SeatCode], 
+[TblValidTrainClassTick].[Is_Active] AS [Is_Active], 
+[TblValidTrainClassTick].[Is_Deleted] AS [Is_Deleted], 
+[TblValidTrainClassTick].[Created_Date] AS [Created_Date], 
+[TblValidTrainClassTick].[Updated_Date] AS [Updated_Date], 
+[TblValidTrainClassTick].[TimeStamp] AS [TimeStamp]
+FROM [dbo].[TblValidTrainClassTick] AS [TblValidTrainClassTick]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

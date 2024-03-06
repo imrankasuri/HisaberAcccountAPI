@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OpenTicketDBModelStoreContainer" CdmEntityContainer="OpenTicketDBEntities">
+    <EntitySetMapping Name="tblCurrentCounters">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblCurrentCounter">
+        <MappingFragment StoreEntitySet="tblCurrentCounter">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="User_Role" ColumnName="User_Role" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Coach_Class" ColumnName="Coach_Class" />
+          <ScalarProperty Name="Coach_No" ColumnName="Coach_No" />
+          <ScalarProperty Name="Current_Station" ColumnName="Current_Station" />
+          <ScalarProperty Name="Departure_Date" ColumnName="Departure_Date" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="Is_ChartFetch" ColumnName="Is_ChartFetch" />
+          <ScalarProperty Name="Is_ReservationStopped" ColumnName="Is_ReservationStopped" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTConcessions">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTConcession">
+        <MappingFragment StoreEntitySet="tblPCTConcession">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="is_adult_only" ColumnName="is_adult_only" />
+          <ScalarProperty Name="seat_adult_tarrif" ColumnName="seat_adult_tarrif" />
+          <ScalarProperty Name="seat_child_tarrif" ColumnName="seat_child_tarrif" />
+          <ScalarProperty Name="berth_adult_tarrif" ColumnName="berth_adult_tarrif" />
+          <ScalarProperty Name="berth_child_tarrif" ColumnName="berth_child_tarrif" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTFares">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTFare">
+        <MappingFragment StoreEntitySet="tblPCTFare">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_id" ColumnName="from_id" />
+          <ScalarProperty Name="from_code" ColumnName="from_code" />
+          <ScalarProperty Name="to_id" ColumnName="to_id" />
+          <ScalarProperty Name="to_code" ColumnName="to_code" />
+          <ScalarProperty Name="ec_seat_adult" ColumnName="ec_seat_adult" />
+          <ScalarProperty Name="ec_berth_adult" ColumnName="ec_berth_adult" />
+          <ScalarProperty Name="ec_seat_child" ColumnName="ec_seat_child" />
+          <ScalarProperty Name="ec_berth_child" ColumnName="ec_berth_child" />
+          <ScalarProperty Name="aclz_adult" ColumnName="aclz_adult" />
+          <ScalarProperty Name="aclz_child" ColumnName="aclz_child" />
+          <ScalarProperty Name="acl_adult" ColumnName="acl_adult" />
+          <ScalarProperty Name="acl_child" ColumnName="acl_child" />
+          <ScalarProperty Name="pc_adult" ColumnName="pc_adult" />
+          <ScalarProperty Name="pc_child" ColumnName="pc_child" />
+          <ScalarProperty Name="sec_adult" ColumnName="sec_adult" />
+          <ScalarProperty Name="sec_child" ColumnName="sec_child" />
+          <ScalarProperty Name="acsl_adult" ColumnName="acsl_adult" />
+          <ScalarProperty Name="acsl_child" ColumnName="acsl_child" />
+          <ScalarProperty Name="isl_adult" ColumnName="isl_adult" />
+          <ScalarProperty Name="isl_child" ColumnName="isl_child" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTRefunds">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTRefund">
+        <MappingFragment StoreEntitySet="tblPCTRefund">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ticket_id" ColumnName="ticket_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+          <ScalarProperty Name="travel_date" ColumnName="travel_date" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_station_id" ColumnName="from_station_id" />
+          <ScalarProperty Name="from_station_code" ColumnName="from_station_code" />
+          <ScalarProperty Name="to_station_id" ColumnName="to_station_id" />
+          <ScalarProperty Name="to_station_code" ColumnName="to_station_code" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="voucher_no" ColumnName="voucher_no" />
+          <ScalarProperty Name="cnic_no" ColumnName="cnic_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="adult_count" ColumnName="adult_count" />
+          <ScalarProperty Name="adult_refund" ColumnName="adult_refund" />
+          <ScalarProperty Name="child_count" ColumnName="child_count" />
+          <ScalarProperty Name="child_refund" ColumnName="child_refund" />
+          <ScalarProperty Name="total_refund" ColumnName="total_refund" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTRoles">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTRole">
+        <MappingFragment StoreEntitySet="tblPCTRoles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTSales">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTSale">
+        <MappingFragment StoreEntitySet="tblPCTSales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ticket_id" ColumnName="ticket_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="travel_date" ColumnName="travel_date" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_station_id" ColumnName="from_station_id" />
+          <ScalarProperty Name="from_station_code" ColumnName="from_station_code" />
+          <ScalarProperty Name="to_station_id" ColumnName="to_station_id" />
+          <ScalarProperty Name="to_station_code" ColumnName="to_station_code" />
+          <ScalarProperty Name="adult_count" ColumnName="adult_count" />
+          <ScalarProperty Name="adult_fare" ColumnName="adult_fare" />
+          <ScalarProperty Name="child_count" ColumnName="child_count" />
+          <ScalarProperty Name="child_fare" ColumnName="child_fare" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="voucher_no" ColumnName="voucher_no" />
+          <ScalarProperty Name="total_fare" ColumnName="total_fare" />
+          <ScalarProperty Name="is_canceled" ColumnName="is_canceled" />
+          <ScalarProperty Name="cnic_no" ColumnName="cnic_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTTrains">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTTrain">
+        <MappingFragment StoreEntitySet="tblPCTTrains">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="name_en" ColumnName="name_en" />
+          <ScalarProperty Name="name_ur" ColumnName="name_ur" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="direction" ColumnName="direction" />
+          <ScalarProperty Name="is_reservation_train" ColumnName="is_reservation_train" />
+          <ScalarProperty Name="has_ec" ColumnName="has_ec" />
+          <ScalarProperty Name="has_aclz" ColumnName="has_aclz" />
+          <ScalarProperty Name="has_acl" ColumnName="has_acl" />
+          <ScalarProperty Name="has_pc" ColumnName="has_pc" />
+          <ScalarProperty Name="has_sec" ColumnName="has_sec" />
+          <ScalarProperty Name="has_acsl" ColumnName="has_acsl" />
+          <ScalarProperty Name="has_isl" ColumnName="has_isl" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTUsers">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTUser">
+        <MappingFragment StoreEntitySet="tblPCTUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_station_id" ColumnName="user_station_id" />
+          <ScalarProperty Name="user_station_code" ColumnName="user_station_code" />
+          <ScalarProperty Name="city_Id" ColumnName="city_Id" />
+          <ScalarProperty Name="city_code" ColumnName="city_code" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblRailStations">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblRailStation">
+        <MappingFragment StoreEntitySet="tblRailStation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Station_Name" ColumnName="Station_Name" />
+          <ScalarProperty Name="Station_Name_UR" ColumnName="Station_Name_UR" />
+          <ScalarProperty Name="Alpha_Code" ColumnName="Alpha_Code" />
+          <ScalarProperty Name="Num_Code" ColumnName="Num_Code" />
+          <ScalarProperty Name="Station_Details" ColumnName="Station_Details" />
+          <ScalarProperty Name="Is_Junction" ColumnName="Is_Junction" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Station_Contact" ColumnName="Station_Contact" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Tehsil" ColumnName="Tehsil" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrains">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblTrain">
+        <MappingFragment StoreEntitySet="tblTrains">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Name" ColumnName="Train_Name" />
+          <ScalarProperty Name="Train_Number" ColumnName="Train_Number" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Direction" ColumnName="Direction" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Show_In_WebTT" ColumnName="Show_In_WebTT" />
+          <ScalarProperty Name="Show_In_ETicket" ColumnName="Show_In_ETicket" />
+          <ScalarProperty Name="Show_In_Res" ColumnName="Show_In_Res" />
+          <ScalarProperty Name="Show_In_ResAdmin" ColumnName="Show_In_ResAdmin" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainTimings">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblTrainTiming">
+        <MappingFragment StoreEntitySet="tblTrainTiming">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Station_ID" ColumnName="Station_ID" />
+          <ScalarProperty Name="Station_Name" ColumnName="Station_Name" />
+          <ScalarProperty Name="Station_Code" ColumnName="Station_Code" />
+          <ScalarProperty Name="Num_Code" ColumnName="Num_Code" />
+          <ScalarProperty Name="Distance_Km" ColumnName="Distance_Km" />
+          <ScalarProperty Name="Arrival" ColumnName="Arrival" />
+          <ScalarProperty Name="Departure" ColumnName="Departure" />
+          <ScalarProperty Name="Old_Train_ID" ColumnName="Old_Train_ID" />
+          <ScalarProperty Name="Day_Add" ColumnName="Day_Add" />
+          <ScalarProperty Name="Station_Sequence" ColumnName="Station_Sequence" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="AlternateTimeArrival" ColumnName="AlternateTimeArrival" />
+          <ScalarProperty Name="AlternateTimeDeparture" ColumnName="AlternateTimeDeparture" />
+          <ScalarProperty Name="NormalTimeEFrom" ColumnName="NormalTimeEFrom" />
+          <ScalarProperty Name="NormalTimeETo" ColumnName="NormalTimeETo" />
+          <ScalarProperty Name="Alternate_Day_Add" ColumnName="Alternate_Day_Add" />
+          <ScalarProperty Name="StationEFromDate" ColumnName="StationEFromDate" />
+          <ScalarProperty Name="StationEToDate" ColumnName="StationEToDate" />
+          <ScalarProperty Name="GuardChartLocation" ColumnName="GuardChartLocation" />
+          <ScalarProperty Name="IsQoutaOnly" ColumnName="IsQoutaOnly" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gaurdcharts">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.gaurdchart">
+        <MappingFragment StoreEntitySet="gaurdchart">
+          <ScalarProperty Name="Reservation_ID" ColumnName="Reservation_ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Train_Name" ColumnName="Train_Name" />
+          <ScalarProperty Name="Coach_Class" ColumnName="Coach_Class" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="Coach_No" ColumnName="Coach_No" />
+          <ScalarProperty Name="Seat_Berth" ColumnName="Seat_Berth" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="TicketSerialNumber" ColumnName="TicketSerialNumber" />
+          <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+          <ScalarProperty Name="PassengerCNIC" ColumnName="PassengerCNIC" />
+          <ScalarProperty Name="GuardChartLocation" ColumnName="GuardChartLocation" />
+          <ScalarProperty Name="To_Station_ID" ColumnName="To_Station_ID" />
+          <ScalarProperty Name="From_Station_ID" ColumnName="From_Station_ID" />
+          <ScalarProperty Name="From_Station" ColumnName="From_Station" />
+          <ScalarProperty Name="To_Station" ColumnName="To_Station" />
+          <ScalarProperty Name="Schedule_From_Station" ColumnName="Schedule_From_Station" />
+          <ScalarProperty Name="From_Station_Seq" ColumnName="From_Station_Seq" />
+          <ScalarProperty Name="Quota" ColumnName="Quota" />
+          <ScalarProperty Name="VoucherPassCode" ColumnName="VoucherPassCode" />
+          <ScalarProperty Name="Departure_Date" ColumnName="Departure_Date" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="Booking_Type" ColumnName="Booking_Type" />
+          <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+          <ScalarProperty Name="CCPaymentCode" ColumnName="CCPaymentCode" />
+          <ScalarProperty Name="Train_StartDate" ColumnName="Train_StartDate" />
+          <ScalarProperty Name="Is_SearchLock" ColumnName="Is_SearchLock" />
+          <ScalarProperty Name="Is_Reserved" ColumnName="Is_Reserved" />
+          <ScalarProperty Name="BookingRemarks" ColumnName="BookingRemarks" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblBerthCharges">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblBerthCharge">
+        <MappingFragment StoreEntitySet="TblBerthCharges">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TrainCat" ColumnName="TrainCat" />
+          <ScalarProperty Name="LowerLegDist" ColumnName="LowerLegDist" />
+          <ScalarProperty Name="UpperLegDist" ColumnName="UpperLegDist" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="BerthCharges" ColumnName="BerthCharges" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblConcessionTicks">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblConcessionTick">
+        <MappingFragment StoreEntitySet="TblConcessionTick">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Ticket_Code" ColumnName="Ticket_Code" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCurrentSales">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblCurrentSale">
+        <MappingFragment StoreEntitySet="tblCurrentSales">
+          <ScalarProperty Name="Reservation_ID" ColumnName="Reservation_ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Train_Name" ColumnName="Train_Name" />
+          <ScalarProperty Name="Coach_Class" ColumnName="Coach_Class" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="Coach_No" ColumnName="Coach_No" />
+          <ScalarProperty Name="Seat_Berth" ColumnName="Seat_Berth" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="TicketSerialNumber" ColumnName="TicketSerialNumber" />
+          <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+          <ScalarProperty Name="PassengerCNIC" ColumnName="PassengerCNIC" />
+          <ScalarProperty Name="GuardChartLocation" ColumnName="GuardChartLocation" />
+          <ScalarProperty Name="To_Station_ID" ColumnName="To_Station_ID" />
+          <ScalarProperty Name="From_Station_ID" ColumnName="From_Station_ID" />
+          <ScalarProperty Name="From_Station" ColumnName="From_Station" />
+          <ScalarProperty Name="To_Station" ColumnName="To_Station" />
+          <ScalarProperty Name="Schedule_From_Station" ColumnName="Schedule_From_Station" />
+          <ScalarProperty Name="From_Station_Seq" ColumnName="From_Station_Seq" />
+          <ScalarProperty Name="Quota" ColumnName="Quota" />
+          <ScalarProperty Name="VoucherPassCode" ColumnName="VoucherPassCode" />
+          <ScalarProperty Name="Departure_Date" ColumnName="Departure_Date" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="Train_StartDate" ColumnName="Train_StartDate" />
+          <ScalarProperty Name="BasicFare" ColumnName="BasicFare" />
+          <ScalarProperty Name="ReceivedFareAmount" ColumnName="ReceivedFareAmount" />
+          <ScalarProperty Name="RefundedAmount" ColumnName="RefundedAmount" />
+          <ScalarProperty Name="NetEarning" ColumnName="NetEarning" />
+          <ScalarProperty Name="BookedByOperatorId" ColumnName="BookedByOperatorId" />
+          <ScalarProperty Name="BookedByOperatorName" ColumnName="BookedByOperatorName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingTime" ColumnName="BookingTime" />
+          <ScalarProperty Name="ReservationCenter" ColumnName="ReservationCenter" />
+          <ScalarProperty Name="Is_Reserved" ColumnName="Is_Reserved" />
+          <ScalarProperty Name="BookingRemarks" ColumnName="BookingRemarks" />
+          <ScalarProperty Name="Booking_Type" ColumnName="Booking_Type" />
+          <ScalarProperty Name="Payment_Method" ColumnName="Payment_Method" />
+          <ScalarProperty Name="Payment_Mode" ColumnName="Payment_Mode" />
+          <ScalarProperty Name="IsCancelled" ColumnName="IsCancelled" />
+          <ScalarProperty Name="CancellationType" ColumnName="CancellationType" />
+          <ScalarProperty Name="CancellationRemarks" ColumnName="CancellationRemarks" />
+          <ScalarProperty Name="CancellationDate" ColumnName="CancellationDate" />
+          <ScalarProperty Name="CancelledByOperatorId" ColumnName="CancelledByOperatorId" />
+          <ScalarProperty Name="CancelledByOperatorName" ColumnName="CancelledByOperatorName" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDeviceUsers">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblDeviceUser">
+        <MappingFragment StoreEntitySet="tblDeviceUsers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="employee_no" ColumnName="employee_no" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="employee_nam" ColumnName="employee_nam" />
+          <ScalarProperty Name="employee_cnic" ColumnName="employee_cnic" />
+          <ScalarProperty Name="division" ColumnName="division" />
+          <ScalarProperty Name="employee_mobile" ColumnName="employee_mobile" />
+          <ScalarProperty Name="designation" ColumnName="designation" />
+          <ScalarProperty Name="scale" ColumnName="scale" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="employee_station" ColumnName="employee_station" />
+          <ScalarProperty Name="employee_role" ColumnName="employee_role" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblDistanceDirs">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblDistanceDir">
+        <MappingFragment StoreEntitySet="TblDistanceDir">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Route_Code" ColumnName="Route_Code" />
+          <ScalarProperty Name="Station_Code" ColumnName="Station_Code" />
+          <ScalarProperty Name="Inter_Station_Distance" ColumnName="Inter_Station_Distance" />
+          <ScalarProperty Name="Distance" ColumnName="Distance" />
+          <ScalarProperty Name="StationSequnce" ColumnName="StationSequnce" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblEFTSales">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblEFTSale">
+        <MappingFragment StoreEntitySet="tblEFTSales">
+          <ScalarProperty Name="Reservation_ID" ColumnName="Reservation_ID" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Train_Name" ColumnName="Train_Name" />
+          <ScalarProperty Name="Coach_Class" ColumnName="Coach_Class" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="Coach_No" ColumnName="Coach_No" />
+          <ScalarProperty Name="Seat_Berth" ColumnName="Seat_Berth" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="TicketSerialNumber" ColumnName="TicketSerialNumber" />
+          <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+          <ScalarProperty Name="PassengerCNIC" ColumnName="PassengerCNIC" />
+          <ScalarProperty Name="To_Station_ID" ColumnName="To_Station_ID" />
+          <ScalarProperty Name="From_Station_ID" ColumnName="From_Station_ID" />
+          <ScalarProperty Name="From_Station" ColumnName="From_Station" />
+          <ScalarProperty Name="To_Station" ColumnName="To_Station" />
+          <ScalarProperty Name="Schedule_From_Station" ColumnName="Schedule_From_Station" />
+          <ScalarProperty Name="From_Station_Seq" ColumnName="From_Station_Seq" />
+          <ScalarProperty Name="Quota" ColumnName="Quota" />
+          <ScalarProperty Name="VoucherPassCode" ColumnName="VoucherPassCode" />
+          <ScalarProperty Name="Departure_Date" ColumnName="Departure_Date" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="Train_StartDate" ColumnName="Train_StartDate" />
+          <ScalarProperty Name="BasicFare" ColumnName="BasicFare" />
+          <ScalarProperty Name="ReceivedFareAmount" ColumnName="ReceivedFareAmount" />
+          <ScalarProperty Name="RefundedAmount" ColumnName="RefundedAmount" />
+          <ScalarProperty Name="NetEarning" ColumnName="NetEarning" />
+          <ScalarProperty Name="BookedByOperatorId" ColumnName="BookedByOperatorId" />
+          <ScalarProperty Name="Booking_Type" ColumnName="Booking_Type" />
+          <ScalarProperty Name="Payment_Method" ColumnName="Payment_Method" />
+          <ScalarProperty Name="Payment_Mode" ColumnName="Payment_Mode" />
+          <ScalarProperty Name="BookedByOperatorName" ColumnName="BookedByOperatorName" />
+          <ScalarProperty Name="BookingDate" ColumnName="BookingDate" />
+          <ScalarProperty Name="BookingTime" ColumnName="BookingTime" />
+          <ScalarProperty Name="ReservationCenter" ColumnName="ReservationCenter" />
+          <ScalarProperty Name="Is_Reserved" ColumnName="Is_Reserved" />
+          <ScalarProperty Name="BookingRemarks" ColumnName="BookingRemarks" />
+          <ScalarProperty Name="deviceId" ColumnName="deviceId" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFareRoundings">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblFareRounding">
+        <MappingFragment StoreEntitySet="TblFareRounding">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="RoundingOff" ColumnName="RoundingOff" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblInsurances">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblInsurance">
+        <MappingFragment StoreEntitySet="TblInsurance">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Insurance_Amount" ColumnName="Insurance_Amount" />
+          <ScalarProperty Name="Date_From" ColumnName="Date_From" />
+          <ScalarProperty Name="Date_To" ColumnName="Date_To" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMinimumFareLimits">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblMinimumFareLimit">
+        <MappingFragment StoreEntitySet="TblMinimumFareLimit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="MinimumFareLimit" ColumnName="MinimumFareLimit" />
+          <ScalarProperty Name="TrainCat" ColumnName="TrainCat" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOverwrites">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblOverwrite">
+        <MappingFragment StoreEntitySet="TblOverwrite">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Ticket_Code" ColumnName="Ticket_Code" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="StationFrom" ColumnName="StationFrom" />
+          <ScalarProperty Name="StationTo" ColumnName="StationTo" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Fare" ColumnName="Fare" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOverwrite_GreenLine">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblOverwrite_GreenLine">
+        <MappingFragment StoreEntitySet="TblOverwrite_GreenLine">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Ticket_Code" ColumnName="Ticket_Code" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="StationFrom" ColumnName="StationFrom" />
+          <ScalarProperty Name="StationTo" ColumnName="StationTo" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Fare" ColumnName="Fare" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblPassFares">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblPassFare">
+        <MappingFragment StoreEntitySet="TblPassFare">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="LowerLeg" ColumnName="LowerLeg" />
+          <ScalarProperty Name="UpperLeg" ColumnName="UpperLeg" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="BaseFare" ColumnName="BaseFare" />
+          <ScalarProperty Name="ResCharges" ColumnName="ResCharges" />
+          <ScalarProperty Name="CED" ColumnName="CED" />
+          <ScalarProperty Name="FuelCharges" ColumnName="FuelCharges" />
+          <ScalarProperty Name="NonStopCharges" ColumnName="NonStopCharges" />
+          <ScalarProperty Name="Otherharges" ColumnName="Otherharges" />
+          <ScalarProperty Name="NightCharges" ColumnName="NightCharges" />
+          <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+          <ScalarProperty Name="Fare_Type" ColumnName="Fare_Type" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblPassFarePITs">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblPassFarePIT">
+        <MappingFragment StoreEntitySet="TblPassFarePIT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FromDate" ColumnName="FromDate" />
+          <ScalarProperty Name="Todate" ColumnName="Todate" />
+          <ScalarProperty Name="LowerLeg" ColumnName="LowerLeg" />
+          <ScalarProperty Name="UpperLeg" ColumnName="UpperLeg" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="BaseFare" ColumnName="BaseFare" />
+          <ScalarProperty Name="ResCharges" ColumnName="ResCharges" />
+          <ScalarProperty Name="CED" ColumnName="CED" />
+          <ScalarProperty Name="FuelCharges" ColumnName="FuelCharges" />
+          <ScalarProperty Name="NonStopCharges" ColumnName="NonStopCharges" />
+          <ScalarProperty Name="Otherharges" ColumnName="Otherharges" />
+          <ScalarProperty Name="NightCharges" ColumnName="NightCharges" />
+          <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+          <ScalarProperty Name="Fare_Type" ColumnName="Fare_Type" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPCTDevices">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblPCTDevice">
+        <MappingFragment StoreEntitySet="tblPCTDevices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="device_type" ColumnName="device_type" />
+          <ScalarProperty Name="last_synced" ColumnName="last_synced" />
+          <ScalarProperty Name="mobile_no1" ColumnName="mobile_no1" />
+          <ScalarProperty Name="mobile_no2" ColumnName="mobile_no2" />
+          <ScalarProperty Name="division_id" ColumnName="division_id" />
+          <ScalarProperty Name="division_code" ColumnName="division_code" />
+          <ScalarProperty Name="division_name" ColumnName="division_name" />
+          <ScalarProperty Name="station_id" ColumnName="station_id" />
+          <ScalarProperty Name="station_code" ColumnName="station_code" />
+          <ScalarProperty Name="station_name" ColumnName="station_name" />
+          <ScalarProperty Name="up_train_id" ColumnName="up_train_id" />
+          <ScalarProperty Name="up_train_code" ColumnName="up_train_code" />
+          <ScalarProperty Name="up_train_name" ColumnName="up_train_name" />
+          <ScalarProperty Name="dn_train_id" ColumnName="dn_train_id" />
+          <ScalarProperty Name="dn_train_code" ColumnName="dn_train_code" />
+          <ScalarProperty Name="dn_train_name" ColumnName="dn_train_name" />
+          <ScalarProperty Name="device_status" ColumnName="device_status" />
+          <ScalarProperty Name="fcm_id" ColumnName="fcm_id" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="created_date" ColumnName="created_date" />
+          <ScalarProperty Name="updated_date" ColumnName="updated_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblStationRanges">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblStationRange">
+        <MappingFragment StoreEntitySet="TblStationRange">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Range_Code" ColumnName="Range_Code" />
+          <ScalarProperty Name="Route_Code" ColumnName="Route_Code" />
+          <ScalarProperty Name="From_Station_Seq" ColumnName="From_Station_Seq" />
+          <ScalarProperty Name="To_Station_Seq" ColumnName="To_Station_Seq" />
+          <ScalarProperty Name="FareType" ColumnName="FareType" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTicketSales">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblTicketSale">
+        <MappingFragment StoreEntitySet="tblTicketSales">
+          <ScalarProperty Name="ticket_id" ColumnName="ticket_id" />
+          <ScalarProperty Name="qr_id" ColumnName="qr_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="travel_date" ColumnName="travel_date" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_station_id" ColumnName="from_station_id" />
+          <ScalarProperty Name="from_station_code" ColumnName="from_station_code" />
+          <ScalarProperty Name="from_st_seq" ColumnName="from_st_seq" />
+          <ScalarProperty Name="to_station_id" ColumnName="to_station_id" />
+          <ScalarProperty Name="to_station_code" ColumnName="to_station_code" />
+          <ScalarProperty Name="coach_no" ColumnName="coach_no" />
+          <ScalarProperty Name="class_code" ColumnName="class_code" />
+          <ScalarProperty Name="adult_count" ColumnName="adult_count" />
+          <ScalarProperty Name="adult_fare" ColumnName="adult_fare" />
+          <ScalarProperty Name="child_count" ColumnName="child_count" />
+          <ScalarProperty Name="child_fare" ColumnName="child_fare" />
+          <ScalarProperty Name="excess_fare" ColumnName="excess_fare" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="voucher_no" ColumnName="voucher_no" />
+          <ScalarProperty Name="total_fare" ColumnName="total_fare" />
+          <ScalarProperty Name="passenger_name" ColumnName="passenger_name" />
+          <ScalarProperty Name="cnic_no" ColumnName="cnic_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="seats_list" ColumnName="seats_list" />
+          <ScalarProperty Name="with_seats" ColumnName="with_seats" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_printed" ColumnName="is_printed" />
+          <ScalarProperty Name="is_synced" ColumnName="is_synced" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTimePackages">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblTimePackage">
+        <MappingFragment StoreEntitySet="TblTimePackage">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Ticket_Code" ColumnName="Ticket_Code" />
+          <ScalarProperty Name="LowerTimeLimit" ColumnName="LowerTimeLimit" />
+          <ScalarProperty Name="UpperTimeLimit" ColumnName="UpperTimeLimit" />
+          <ScalarProperty Name="Tariff" ColumnName="Tariff" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTrainCategories">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblTrainCategory">
+        <MappingFragment StoreEntitySet="TblTrainCategory">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TrainCat" ColumnName="TrainCat" />
+          <ScalarProperty Name="TrainCode" ColumnName="TrainCode" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTrainClassFares">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblTrainClassFare">
+        <MappingFragment StoreEntitySet="TblTrainClassFare">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="FareType" ColumnName="FareType" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrainClassRangeFares">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.tblTrainClassRangeFare">
+        <MappingFragment StoreEntitySet="tblTrainClassRangeFare">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Range_Code" ColumnName="Range_Code" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Fare_Type" ColumnName="Fare_Type" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblTrainRoutes">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblTrainRoute">
+        <MappingFragment StoreEntitySet="TblTrainRoute">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Route_Code" ColumnName="Route_Code" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblValidTrainClassTicks">
+      <EntityTypeMapping TypeName="OpenTicketDBModel.TblValidTrainClassTick">
+        <MappingFragment StoreEntitySet="TblValidTrainClassTick">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Ticket_Code" ColumnName="Ticket_Code" />
+          <ScalarProperty Name="Is_SeatCode" ColumnName="Is_SeatCode" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_Create_Update_PCTDevice" FunctionName="OpenTicketDBModel.Store.SP_Create_Update_PCTDevice" />
+    <FunctionImportMapping FunctionImportName="SP_Create_Update_PCTDevice_Backup" FunctionName="OpenTicketDBModel.Store.SP_Create_Update_PCTDevice_Backup" />
+    <FunctionImportMapping FunctionImportName="SP_Create_Update_PCTUser" FunctionName="OpenTicketDBModel.Store.SP_Create_Update_PCTUser" />
+    <FunctionImportMapping FunctionImportName="SP_Create_Update_PCTUserRoles" FunctionName="OpenTicketDBModel.Store.SP_Create_Update_PCTUserRoles" />
+    <FunctionImportMapping FunctionImportName="sp_FareCal" FunctionName="OpenTicketDBModel.Store.sp_FareCal" />
+    <FunctionImportMapping FunctionImportName="SP_Get_PCTRoles" FunctionName="OpenTicketDBModel.Store.SP_Get_PCTRoles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.SP_Get_PCTRoles_Result">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="Created_Date" ColumnName="Created_Date" />
+          <ScalarProperty Name="Updated_Date" ColumnName="Updated_Date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Get_PCTUsreList" FunctionName="OpenTicketDBModel.Store.SP_Get_PCTUsreList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.SP_Get_PCTUsreList_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_station_id" ColumnName="user_station_id" />
+          <ScalarProperty Name="user_station_code" ColumnName="user_station_code" />
+          <ScalarProperty Name="city_Id" ColumnName="city_Id" />
+          <ScalarProperty Name="city_code" ColumnName="city_code" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_PCTUser_Authentication" FunctionName="OpenTicketDBModel.Store.SP_PCTUser_Authentication">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.SP_PCTUser_Authentication_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_Id" ColumnName="user_Id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="user_station_id" ColumnName="user_station_id" />
+          <ScalarProperty Name="user_station_code" ColumnName="user_station_code" />
+          <ScalarProperty Name="city_Id" ColumnName="city_Id" />
+          <ScalarProperty Name="city_code" ColumnName="city_code" />
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_Register_PCTDevice" FunctionName="OpenTicketDBModel.Store.SP_Register_PCTDevice" />
+    <FunctionImportMapping FunctionImportName="SP_Update_PCTDevice_Train" FunctionName="OpenTicketDBModel.Store.SP_Update_PCTDevice_Train" />
+    <FunctionImportMapping FunctionImportName="USP_Rpt_GetGaurdChart_EFT" FunctionName="OpenTicketDBModel.Store.USP_Rpt_GetGaurdChart_EFT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_Result">
+          <ScalarProperty Name="ReservationId" ColumnName="ReservationId" />
+          <ScalarProperty Name="Quota" ColumnName="Quota" />
+          <ScalarProperty Name="Schedule_From_Station" ColumnName="Schedule_From_Station" />
+          <ScalarProperty Name="Coach_Class" ColumnName="Coach_Class" />
+          <ScalarProperty Name="Coach_No" ColumnName="Coach_No" />
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="Departure_Date" ColumnName="Departure_Date" />
+          <ScalarProperty Name="DepartureTime" ColumnName="DepartureTime" />
+          <ScalarProperty Name="From_Station" ColumnName="From_Station" />
+          <ScalarProperty Name="Seat_Berth" ColumnName="Seat_Berth" />
+          <ScalarProperty Name="To_Station" ColumnName="To_Station" />
+          <ScalarProperty Name="Train_Code" ColumnName="Train_Code" />
+          <ScalarProperty Name="Train_Name" ColumnName="Train_Name" />
+          <ScalarProperty Name="VoucherPassCode" ColumnName="VoucherPassCode" />
+          <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+          <ScalarProperty Name="TicketCode" ColumnName="TicketCode" />
+          <ScalarProperty Name="TicketSerialNumber" ColumnName="TicketSerialNumber" />
+          <ScalarProperty Name="PassengerName" ColumnName="PassengerName" />
+          <ScalarProperty Name="PassengerCNIC" ColumnName="PassengerCNIC" />
+          <ScalarProperty Name="Is_Reserved" ColumnName="Is_Reserved" />
+          <ScalarProperty Name="BookingRemarks" ColumnName="BookingRemarks" />
+          <ScalarProperty Name="Train_ID" ColumnName="Train_ID" />
+          <ScalarProperty Name="From_Station_ID" ColumnName="From_Station_ID" />
+          <ScalarProperty Name="To_Station_ID" ColumnName="To_Station_ID" />
+          <ScalarProperty Name="Train_StartDate" ColumnName="Train_StartDate" />
+          <ScalarProperty Name="Booking_Type" ColumnName="Booking_Type" />
+          <ScalarProperty Name="Payment_Method" ColumnName="Payment_Method" />
+          <ScalarProperty Name="Payment_Mode" ColumnName="Payment_Mode" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_Rpt_GetGaurdChart_EFT_OT" FunctionName="OpenTicketDBModel.Store.USP_Rpt_GetGaurdChart_EFT_OT">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_OT_Result">
+          <ScalarProperty Name="ticket_id" ColumnName="ticket_id" />
+          <ScalarProperty Name="qr_id" ColumnName="qr_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="device_id" ColumnName="device_id" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="travel_date" ColumnName="travel_date" />
+          <ScalarProperty Name="train_id" ColumnName="train_id" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_station_id" ColumnName="from_station_id" />
+          <ScalarProperty Name="from_station_code" ColumnName="from_station_code" />
+          <ScalarProperty Name="from_st_seq" ColumnName="from_st_seq" />
+          <ScalarProperty Name="to_station_id" ColumnName="to_station_id" />
+          <ScalarProperty Name="to_station_code" ColumnName="to_station_code" />
+          <ScalarProperty Name="coach_no" ColumnName="coach_no" />
+          <ScalarProperty Name="class_code" ColumnName="class_code" />
+          <ScalarProperty Name="adult_count" ColumnName="adult_count" />
+          <ScalarProperty Name="adult_fare" ColumnName="adult_fare" />
+          <ScalarProperty Name="child_count" ColumnName="child_count" />
+          <ScalarProperty Name="child_fare" ColumnName="child_fare" />
+          <ScalarProperty Name="excess_fare" ColumnName="excess_fare" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="voucher_no" ColumnName="voucher_no" />
+          <ScalarProperty Name="total_fare" ColumnName="total_fare" />
+          <ScalarProperty Name="passenger_name" ColumnName="passenger_name" />
+          <ScalarProperty Name="cnic_no" ColumnName="cnic_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="seats_list" ColumnName="seats_list" />
+          <ScalarProperty Name="with_seats" ColumnName="with_seats" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="is_printed" ColumnName="is_printed" />
+          <ScalarProperty Name="is_synced" ColumnName="is_synced" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="USP_Rpt_GetGaurdChart_EFT_OT_1" FunctionName="OpenTicketDBModel.Store.USP_Rpt_GetGaurdChart_EFT_OT_1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_OT_1_Result">
+          <ScalarProperty Name="ticket_id" ColumnName="ticket_id" />
+          <ScalarProperty Name="booking_date" ColumnName="booking_date" />
+          <ScalarProperty Name="travel_date" ColumnName="travel_date" />
+          <ScalarProperty Name="train_code" ColumnName="train_code" />
+          <ScalarProperty Name="from_station_code" ColumnName="from_station_code" />
+          <ScalarProperty Name="to_station_code" ColumnName="to_station_code" />
+          <ScalarProperty Name="coach_no" ColumnName="coach_no" />
+          <ScalarProperty Name="class_code" ColumnName="class_code" />
+          <ScalarProperty Name="adult_count" ColumnName="adult_count" />
+          <ScalarProperty Name="child_count" ColumnName="child_count" />
+          <ScalarProperty Name="ticket_code" ColumnName="ticket_code" />
+          <ScalarProperty Name="voucher_no" ColumnName="voucher_no" />
+          <ScalarProperty Name="passenger_name" ColumnName="passenger_name" />
+          <ScalarProperty Name="cnic_no" ColumnName="cnic_no" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

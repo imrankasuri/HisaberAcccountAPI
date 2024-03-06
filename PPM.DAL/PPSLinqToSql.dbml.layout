@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.875" name="PPSLinqToSql">
+  <DataContextMoniker Name="/PPSLinqToSqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="22d4aba5-b66c-4292-9b54-aaebd8149d98" isExpanded="false" absoluteBounds="3.25, 5.875, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblAccessKey" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e9d3f21-b6f7-4274-9277-6ae4497f5905" absoluteBounds="3.2649999999999997, 6.3350000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b3980af-1371-4ecc-bb6d-4f67f1c0c542" isExpanded="false" absoluteBounds="0.625, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblAccountType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ddd3ce2-933f-4d06-8ea2-88c48122c0f1" absoluteBounds="0.64000000000000057, 2.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81e3886d-7566-46fe-8eb1-8ad80c201b3a" isExpanded="false" absoluteBounds="6.25, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblEmailLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d666e2ef-251a-42fa-9738-87e766b584c6" absoluteBounds="6.2650000000000006, 5.5850000000000009, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e0ae3879-f9b3-4eaa-8ff9-4dbf30ec6431" isExpanded="false" absoluteBounds="0.625, 5.875, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblInvestmentSummary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3359b0e6-a487-49d8-a1c6-965f77d37097" absoluteBounds="0.64000000000000012, 6.3350000000000009, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="745822b7-5388-4af9-8fca-0c21ec86e77b" isExpanded="false" absoluteBounds="6.25, 5.875, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblSetting" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa9da405-09bd-4c88-8053-34ae2687b68f" absoluteBounds="6.2650000000000006, 6.3350000000000009, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02131084-0704-40bd-af7a-fccc3783ba0d" isExpanded="false" absoluteBounds="6.25, 6.625, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblSMSSent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f4f874a-757a-4e1a-9aa9-00e6279fd2c5" absoluteBounds="6.2650000000000006, 7.0850000000000009, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6add6b4a-f29e-4a78-80f0-f2a9bdb745f5" isExpanded="false" absoluteBounds="3.25, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a871cd37-d67f-440f-93ad-3eb38e79ff70" absoluteBounds="3.265, 1.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="952e6a16-9951-4b10-acd0-467fd83d6d1f" isExpanded="false" absoluteBounds="0.625, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblMeasureUnit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07d3b1eb-ad54-4bc8-9f86-7514bc772ede" absoluteBounds="0.64000000000000012, 1.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b295cc6-d4a0-44a2-afbe-2e149b82a142" isExpanded="false" absoluteBounds="6.25, 1.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblProductPump" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1e7a117c-98aa-45f2-99d1-04b9eb7f4c2e" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 1.6); (6.25 : 1.6)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PPSLinqToSqlDataContext/tblProduct/tblProduct_tblProductPump" />
+      <nodes>
+        <classShapeMoniker Id="6add6b4a-f29e-4a78-80f0-f2a9bdb745f5" />
+        <classShapeMoniker Id="4b295cc6-d4a0-44a2-afbe-2e149b82a142" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="bb6436af-0a12-4493-a926-6d0ff5c9bd8a" isExpanded="false" absoluteBounds="0.625, 3.625, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblDefaultProduct" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e44ea0a2-0438-42a1-9180-8c7decb4bc9f" absoluteBounds="0.64000000000000012, 4.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="08adb121-fecf-477d-95c1-f52f7fff3491" isExpanded="false" absoluteBounds="0.625, 7.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblFuleProvider" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e4446f5-8615-4c70-a9d4-8f9851cc2316" absoluteBounds="0.64000000000000012, 7.8350000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="49ce40cf-5fcf-48e2-ab2f-954954e43fcb" isExpanded="false" absoluteBounds="3.25, 5.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblProductLedger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1477a0c1-e687-4b03-9f9b-17ccacae221e" absoluteBounds="3.265, 5.585, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67ebee0b-d375-4cea-ac8d-7d24a0514b2a" isExpanded="false" absoluteBounds="3.25, 4.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblSaleInvoiceHead" />
+      <nestedChildShapes>
+        <elementListCompartment Id="312dee8a-e552-4175-953f-25c1a59e7ea9" absoluteBounds="3.265, 4.835, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbe4b1c7-60aa-4788-93eb-a97f451e9236" isExpanded="false" absoluteBounds="6.25, 2.25, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblGeneralVoucher" />
+      <nestedChildShapes>
+        <elementListCompartment Id="782706fd-2518-410a-84e6-526eba10a09c" absoluteBounds="6.265, 2.71, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c4a3faf-6ee0-452f-8b2d-f09a823e57ef" isExpanded="false" absoluteBounds="6.25, 7.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblDIPAdjustment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5eb69aa9-db56-4499-b112-e3df2e0a6b99" absoluteBounds="6.2650000000000006, 7.8350000000000009, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5eb89da5-bdd2-4e4d-836d-9ec048bc31d4" isExpanded="false" absoluteBounds="3.375, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="659ade2d-9bf1-40e6-947c-3b37de3a9e7e" absoluteBounds="3.39, 2.585, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 2.35); (3.375 : 2.35)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PPSLinqToSqlDataContext/tblAccountType/tblAccountType_tblAccount" />
+      <nodes>
+        <classShapeMoniker Id="4b3980af-1371-4ecc-bb6d-4f67f1c0c542" />
+        <classShapeMoniker Id="5eb89da5-bdd2-4e4d-836d-9ec048bc31d4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ff7789e8-ad3d-4a8c-be80-60849226c8e0" isExpanded="false" absoluteBounds="3.25, 7.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblLoginLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba1d54fa-4143-4cb1-9ddd-7489c3c8f190" absoluteBounds="3.265, 7.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3d1d63e9-a178-418d-851e-897f63649520" isExpanded="false" absoluteBounds="0.625, 4.375, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblPumpReading" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82cee43b-60e8-4a4c-9f6c-736b03337ed1" absoluteBounds="0.64, 4.835, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf6198e7-f66c-44f5-85f9-66df24d055f3" isExpanded="false" absoluteBounds="6.375, 4.5, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblSaleInvoiceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abc1addc-8fce-4560-ba50-07d699de615b" absoluteBounds="6.39, 4.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 4.6625); (6.375 : 4.6625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PPSLinqToSqlDataContext/tblSaleInvoiceHead/tblSaleInvoiceHead_tblSaleInvoiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="67ebee0b-d375-4cea-ac8d-7d24a0514b2a" />
+        <classShapeMoniker Id="cf6198e7-f66c-44f5-85f9-66df24d055f3" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0a841fb1-3ed2-4955-baaa-ac3b46f63343" isExpanded="false" absoluteBounds="3.25, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblGeneralLedger" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cbb8a163-54d3-46f2-a5cf-37cdc265c314" absoluteBounds="3.265, 3.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="986efdef-5a06-482c-b392-080c2bf2a244" isExpanded="false" absoluteBounds="6.375, 3.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblCustomerRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f76fc48-c873-44b5-ad5d-56bdb412c147" absoluteBounds="6.39, 3.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a162c6f-d92b-4dd8-ad34-d82087b54bbf" isExpanded="false" absoluteBounds="3.25, 8.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblAccountMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76b6e605-b9e6-4822-9c6a-1aed186c8d02" absoluteBounds="3.265, 8.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c33b15ca-ab31-4af1-848f-2613c72859f4" isExpanded="false" absoluteBounds="0.625, 8.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblException" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d30331a0-eedb-4759-b36e-379133626667" absoluteBounds="0.64, 8.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b32df38a-bf9b-44e6-920f-aeb9a1e41b6d" isExpanded="false" absoluteBounds="0.625, 3, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblTankDefination" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0ef544e-2a72-40fe-8d46-432e8308e1be" absoluteBounds="0.64, 3.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ecabb28-be22-4799-88c3-284e5cd0f702" isExpanded="false" absoluteBounds="0.625, 5.25, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblCompanyInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="199d65dc-9d3e-450d-a74d-561c1d650841" absoluteBounds="0.64, 5.71, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a0f4633-8919-4bcf-bc4b-0e485d9cfbe5" isExpanded="false" absoluteBounds="6.25, 8.125, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblProductMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ff41268-5c1a-4b2f-a228-45274f648214" absoluteBounds="6.265, 8.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c98fb468-4f9e-43da-88d3-dd1e0bca7ee0" isExpanded="false" absoluteBounds="0.625, 6.625, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblDipReading" />
+      <nestedChildShapes>
+        <elementListCompartment Id="195494be-50c3-4c12-a2f4-f84ca20fb2a5" absoluteBounds="0.64, 7.085, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3f12f1a-539e-4978-811e-c755131215ed" isExpanded="false" absoluteBounds="6.25, 3.875, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblPurchaseInvoiceDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="148099c6-365c-4964-8274-1c06f484467b" absoluteBounds="6.2650000000000006, 4.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6bfe7b99-b69b-4b63-ab24-a6a003cd0ad8" isExpanded="false" absoluteBounds="3.25, 3.625, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblPurchaseInvoiceHead" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b6f91fe-ed15-46af-bbe6-995f2952e8fa" absoluteBounds="3.2650000000000006, 4.085, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 3.975); (6.25 : 3.975)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PPSLinqToSqlDataContext/tblPurchaseInvoiceHead/tblPurchaseInvoiceHead_tblPurchaseInvoiceDetail" />
+      <nodes>
+        <classShapeMoniker Id="6bfe7b99-b69b-4b63-ab24-a6a003cd0ad8" />
+        <classShapeMoniker Id="e3f12f1a-539e-4978-811e-c755131215ed" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a8ab1a68-62a6-42a9-9d61-3f87397813d3" isExpanded="false" absoluteBounds="3.25, 6.625, 2, 0.45">
+      <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa896558-4a80-4fc8-a4fd-fbd85543ba6f" absoluteBounds="3.265, 7.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

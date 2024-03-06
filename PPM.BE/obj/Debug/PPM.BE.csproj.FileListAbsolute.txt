@@ -1,0 +1,10 @@
+C:\E Drive\Projects\Personal\PPS New Version\PPM.BE\bin\Debug\PPM.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPM.BE\bin\Debug\PPM.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPM.BE\obj\Debug\PPM.BE.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPM.BE\obj\Debug\PPM.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPM.BE\obj\Debug\PPM.BE.pdb
+C:\E Drive\Projects\Git\PetrolPump\PPM.BE\bin\Debug\PPM.BE.dll
+C:\E Drive\Projects\Git\PetrolPump\PPM.BE\bin\Debug\PPM.BE.pdb
+C:\E Drive\Projects\Git\PetrolPump\PPM.BE\obj\Debug\PPM.BE.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Git\PetrolPump\PPM.BE\obj\Debug\PPM.BE.dll
+C:\E Drive\Projects\Git\PetrolPump\PPM.BE\obj\Debug\PPM.BE.pdb

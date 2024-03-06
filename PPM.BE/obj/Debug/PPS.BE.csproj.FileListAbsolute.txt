@@ -1,0 +1,24 @@
+E:\ali imran\personal\PPS\PPS.BE\bin\Debug\PPS.BE.dll
+E:\ali imran\personal\PPS\PPS.BE\bin\Debug\PPS.BE.pdb
+E:\ali imran\personal\PPS\PPS.BE\obj\Debug\ResolveAssemblyReference.cache
+E:\ali imran\personal\PPS\PPS.BE\obj\Debug\PPS.BE.dll
+E:\ali imran\personal\PPS\PPS.BE\obj\Debug\PPS.BE.pdb
+F:\projects\PPS\PPS.BE\bin\Debug\PPS.BE.dll
+F:\projects\PPS\PPS.BE\bin\Debug\PPS.BE.pdb
+F:\projects\PPS\PPS.BE\obj\Debug\PPS.BE.dll
+F:\projects\PPS\PPS.BE\obj\Debug\PPS.BE.pdb
+F:\projects\PPS\PPS.BE\obj\Debug\PPS.BE.csprojResolveAssemblyReference.cache
+E:\Projects\Personal\PPS\PPS.BE\bin\Debug\PPS.BE.dll
+E:\Projects\Personal\PPS\PPS.BE\bin\Debug\PPS.BE.pdb
+E:\Projects\Personal\PPS\PPS.BE\obj\Debug\PPS.BE.dll
+E:\Projects\Personal\PPS\PPS.BE\obj\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS\PPS.BE\bin\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS\PPS.BE\bin\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS\PPS.BE\obj\Debug\PPS.BE.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS\PPS.BE\obj\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS\PPS.BE\obj\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.BE\bin\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.BE\bin\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.BE\obj\Debug\PPS.BE.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPS.BE\obj\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.BE\obj\Debug\PPS.BE.pdb

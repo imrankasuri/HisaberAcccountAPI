@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>c:\ppmapi</_PublishTargetUrl>
+    <History>True|2024-02-29T09:54:04.8706594Z;True|2024-02-21T18:35:16.3187240+05:00;True|2024-02-21T18:34:38.5519238+05:00;True|2024-02-21T17:02:52.2990480+05:00;True|2024-02-21T17:02:45.9513117+05:00;True|2024-02-13T17:40:15.2211127+05:00;True|2024-02-13T16:10:13.6208767+05:00;True|2024-02-13T14:10:01.4279107+05:00;True|2024-02-06T15:43:31.0388812+05:00;True|2024-02-06T11:36:46.5207889+05:00;True|2024-02-06T11:33:50.3830814+05:00;True|2024-02-02T22:54:54.0383898+05:00;True|2024-02-02T22:47:52.1458072+05:00;True|2024-02-01T14:28:54.2178043+05:00;True|2024-02-01T14:25:15.9303762+05:00;True|2024-01-31T16:31:25.7496381+05:00;True|2024-01-30T17:39:19.7901787+05:00;True|2024-01-30T16:23:03.0892704+05:00;True|2024-01-29T23:05:09.8249552+05:00;True|2024-01-29T16:44:27.9420680+05:00;True|2024-01-16T12:36:20.9184373+05:00;True|2024-01-15T14:50:52.7219349+05:00;True|2024-01-15T14:50:35.9621970+05:00;True|2024-01-10T11:44:03.0950034+05:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/AtomiModel.dll">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>04/04/2019 11:29:39</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>08/08/2012 23:00:50</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Administration.dll">
+      <publishTime>03/08/2016 11:28:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 16:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/31/2012 00:26:26</publishTime>
+    </File>
+    <File Include="bin/PPM.APIs.dll">
+      <publishTime>02/29/2024 14:53:54</publishTime>
+    </File>
+    <File Include="bin/PPM.APIs.pdb">
+      <publishTime>02/29/2024 14:53:54</publishTime>
+    </File>
+    <File Include="bin/PPM.BE.dll">
+      <publishTime>02/21/2024 18:34:33</publishTime>
+    </File>
+    <File Include="bin/PPM.BE.pdb">
+      <publishTime>02/21/2024 18:34:33</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.dll">
+      <publishTime>02/21/2024 17:02:34</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.dll.config">
+      <publishTime>01/02/2024 10:54:26</publishTime>
+    </File>
+    <File Include="bin/PPM.DAL.pdb">
+      <publishTime>02/21/2024 17:02:34</publishTime>
+    </File>
+    <File Include="bin/RestSharp.dll">
+      <publishTime>10/21/2021 15:26:38</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>08/08/2012 22:58:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>08/08/2012 22:58:22</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>08/08/2012 22:58:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>08/08/2012 22:58:28</publishTime>
+    </File>
+    <File Include="bin/System.Web.Providers.dll">
+      <publishTime>08/08/2012 22:57:58</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>08/08/2012 22:57:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>08/08/2012 22:58:20</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>08/08/2012 23:02:20</publishTime>
+    </File>
+    <File Include="bin/zxing.dll">
+      <publishTime>04/14/2018 18:39:12</publishTime>
+    </File>
+    <File Include="Email_Template/Forgot_Personal.htm">
+      <publishTime>11/09/2022 12:40:37</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/04/2019 11:29:32</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/28/2022 10:34:09</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/11/2019 15:17:01</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>04/04/2019 11:29:28</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/04/2019 11:29:29</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/21/2024 18:34:38</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

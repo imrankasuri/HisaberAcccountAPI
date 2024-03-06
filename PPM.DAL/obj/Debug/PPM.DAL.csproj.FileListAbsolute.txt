@@ -1,0 +1,30 @@
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPM.DAL.dll.config
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPM.DAL.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\bin\Debug\PPS.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPM.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPM.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPM.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPS.DAL\obj\Debug\PPM.DAL.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\bin\Debug\PPM.DAL.dll.config
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\bin\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\bin\Debug\PPM.DAL.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\bin\Debug\PPM.BE.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\bin\Debug\PPM.BE.pdb
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\obj\Debug\PPM.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\obj\Debug\PPM.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\obj\Debug\PPM.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\obj\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Personal\PPS New Version\PPM.DAL\obj\Debug\PPM.DAL.pdb
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\bin\Debug\PPM.DAL.dll.config
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\bin\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\bin\Debug\PPM.DAL.pdb
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\bin\Debug\PPM.BE.dll
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\bin\Debug\PPM.BE.pdb
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\obj\Debug\PPM.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\obj\Debug\PPM.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\obj\Debug\PPM.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\obj\Debug\PPM.DAL.dll
+C:\E Drive\Projects\Git\PetrolPump\PPM.DAL\obj\Debug\PPM.DAL.pdb

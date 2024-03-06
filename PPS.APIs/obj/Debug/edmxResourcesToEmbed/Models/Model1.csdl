@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OpenTicketDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblCurrentCounter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="User_Role" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Train_ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Coach_Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Coach_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Current_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Departure_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DepartureTime" Type="Time" Precision="7" />
+    <Property Name="Is_ChartFetch" Type="Boolean" Nullable="false" />
+    <Property Name="Is_ReservationStopped" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTConcession">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ticket_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_adult_only" Type="Boolean" Nullable="false" />
+    <Property Name="seat_adult_tarrif" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="seat_child_tarrif" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="berth_adult_tarrif" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="berth_child_tarrif" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTFare">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="train_id" Type="Int32" Nullable="false" />
+    <Property Name="train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="from_id" Type="Int32" Nullable="false" />
+    <Property Name="from_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="to_id" Type="Int32" Nullable="false" />
+    <Property Name="to_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ec_seat_adult" Type="Int32" Nullable="false" />
+    <Property Name="ec_berth_adult" Type="Int32" Nullable="false" />
+    <Property Name="ec_seat_child" Type="Int32" Nullable="false" />
+    <Property Name="ec_berth_child" Type="Int32" Nullable="false" />
+    <Property Name="aclz_adult" Type="Int32" Nullable="false" />
+    <Property Name="aclz_child" Type="Int32" Nullable="false" />
+    <Property Name="acl_adult" Type="Int32" Nullable="false" />
+    <Property Name="acl_child" Type="Int32" Nullable="false" />
+    <Property Name="pc_adult" Type="Int32" Nullable="false" />
+    <Property Name="pc_child" Type="Int32" Nullable="false" />
+    <Property Name="sec_adult" Type="Int32" Nullable="false" />
+    <Property Name="sec_child" Type="Int32" Nullable="false" />
+    <Property Name="acsl_adult" Type="Int32" Nullable="false" />
+    <Property Name="acsl_child" Type="Int32" Nullable="false" />
+    <Property Name="isl_adult" Type="Int32" Nullable="false" />
+    <Property Name="isl_child" Type="Int32" Nullable="false" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTRefund">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ticket_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="device_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="cancel_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="travel_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="train_id" Type="Int32" Nullable="false" />
+    <Property Name="train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="from_station_id" Type="Int32" Nullable="false" />
+    <Property Name="from_station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="to_station_id" Type="Int32" Nullable="false" />
+    <Property Name="to_station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ticket_code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="voucher_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="cnic_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mobile_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="adult_count" Type="Int32" Nullable="false" />
+    <Property Name="adult_refund" Type="Int32" Nullable="false" />
+    <Property Name="child_count" Type="Int32" Nullable="false" />
+    <Property Name="child_refund" Type="Int32" Nullable="false" />
+    <Property Name="total_refund" Type="Int32" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTRole">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ModuleName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTSale">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ticket_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="device_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="booking_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="travel_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="train_id" Type="Int32" Nullable="false" />
+    <Property Name="train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="from_station_id" Type="Int32" Nullable="false" />
+    <Property Name="from_station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="to_station_id" Type="Int32" Nullable="false" />
+    <Property Name="to_station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="adult_count" Type="Int32" Nullable="false" />
+    <Property Name="adult_fare" Type="Int32" Nullable="false" />
+    <Property Name="child_count" Type="Int32" Nullable="false" />
+    <Property Name="child_fare" Type="Int32" Nullable="false" />
+    <Property Name="ticket_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="voucher_no" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="total_fare" Type="Int32" Nullable="false" />
+    <Property Name="is_canceled" Type="Boolean" Nullable="false" />
+    <Property Name="cnic_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="mobile_no" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTTrain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="train_id" Type="Int32" Nullable="false" />
+    <Property Name="name_en" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name_ur" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="direction" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="is_reservation_train" Type="Boolean" Nullable="false" />
+    <Property Name="has_ec" Type="Boolean" Nullable="false" />
+    <Property Name="has_aclz" Type="Boolean" Nullable="false" />
+    <Property Name="has_acl" Type="Boolean" Nullable="false" />
+    <Property Name="has_pc" Type="Boolean" Nullable="false" />
+    <Property Name="has_sec" Type="Boolean" Nullable="false" />
+    <Property Name="has_acsl" Type="Boolean" Nullable="false" />
+    <Property Name="has_isl" Type="Boolean" Nullable="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblPCTUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="user_station_id" Type="Int32" Nullable="false" />
+    <Property Name="user_station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="city_Id" Type="Int32" />
+    <Property Name="city_code" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="role_id" Type="Int32" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblRailStation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Station_Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Station_Name_UR" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Alpha_Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Num_Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Station_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Junction" Type="Boolean" />
+    <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Station_Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="District" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tehsil" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTrain">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Train_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Train_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Direction" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Show_In_WebTT" Type="Boolean" Nullable="false" />
+    <Property Name="Show_In_ETicket" Type="Boolean" Nullable="false" />
+    <Property Name="Show_In_Res" Type="Boolean" Nullable="false" />
+    <Property Name="Show_In_ResAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTrainTiming">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Train_ID" Type="Int32" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Station_ID" Type="Int32" />
+    <Property Name="Station_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Station_Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Num_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Distance_Km" Type="Int32" />
+    <Property Name="Arrival" Type="Time" Precision="7" />
+    <Property Name="Departure" Type="Time" Precision="7" />
+    <Property Name="Old_Train_ID" Type="Int32" />
+    <Property Name="Day_Add" Type="Int32" />
+    <Property Name="Station_Sequence" Type="Int32" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="AlternateTimeArrival" Type="Time" Precision="7" />
+    <Property Name="AlternateTimeDeparture" Type="Time" Precision="7" />
+    <Property Name="NormalTimeEFrom" Type="DateTime" Precision="0" />
+    <Property Name="NormalTimeETo" Type="DateTime" Precision="0" />
+    <Property Name="Alternate_Day_Add" Type="Int32" />
+    <Property Name="StationEFromDate" Type="DateTime" Precision="0" />
+    <Property Name="StationEToDate" Type="DateTime" Precision="0" />
+    <Property Name="GuardChartLocation" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="IsQoutaOnly" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="gaurdchart">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="Is_SearchLock" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="Int64" Nullable="false" />
+    <Property Name="Train_ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Train_Name" Type="String" MaxLength="65" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Coach_Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+    <Property Name="Coach_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seat_Berth" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TicketNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TicketCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TicketSerialNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerCNIC" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="GuardChartLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Schedule_From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="From_Station_Seq" Type="Int32" Nullable="false" />
+    <Property Name="Quota" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="VoucherPassCode" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Departure_Date" Type="DateTime" Precision="0" />
+    <Property Name="DepartureTime" Type="Time" Precision="7" />
+    <Property Name="Booking_Type" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="PaymentType" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="CCPaymentCode" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Name="Train_StartDate" Type="DateTime" Precision="0" />
+    <Property Name="Is_SearchLock" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Reserved" Type="Boolean" Nullable="false" />
+    <Property Name="BookingRemarks" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TblBerthCharge">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TrainCat" />
+      <PropertyRef Name="LowerLegDist" />
+      <PropertyRef Name="UpperLegDist" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BerthCharges" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Update_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TrainCat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LowerLegDist" Type="Int32" Nullable="false" />
+    <Property Name="UpperLegDist" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BerthCharges" Type="Decimal" Precision="8" Scale="4" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Update_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblConcessionTick">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Ticket_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Tariff" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblCurrentSale">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="BasicFare" />
+      <PropertyRef Name="ReceivedFareAmount" />
+      <PropertyRef Name="RefundedAmount" />
+      <PropertyRef Name="NetEarning" />
+      <PropertyRef Name="BookedByOperatorId" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="BookingRemarks" />
+      <PropertyRef Name="IsCancelled" />
+      <PropertyRef Name="CancellationType" />
+      <PropertyRef Name="CancellationRemarks" />
+      <PropertyRef Name="CancelledByOperatorId" />
+      <PropertyRef Name="CancelledByOperatorName" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="Int64" Nullable="false" />
+    <Property Name="Train_ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Train_Name" Type="String" MaxLength="65" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Coach_Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+    <Property Name="Coach_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seat_Berth" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TicketNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TicketCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TicketSerialNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerCNIC" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="GuardChartLocation" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Schedule_From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="From_Station_Seq" Type="Int32" Nullable="false" />
+    <Property Name="Quota" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="VoucherPassCode" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Departure_Date" Type="DateTime" Precision="0" />
+    <Property Name="DepartureTime" Type="Time" Precision="7" />
+    <Property Name="Train_StartDate" Type="DateTime" Precision="0" />
+    <Property Name="BasicFare" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceivedFareAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefundedAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetEarning" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BookedByOperatorId" Type="Int32" Nullable="false" />
+    <Property Name="BookedByOperatorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BookingDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingTime" Type="Time" Precision="7" />
+    <Property Name="ReservationCenter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Reserved" Type="Boolean" Nullable="false" />
+    <Property Name="BookingRemarks" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Booking_Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Payment_Method" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Payment_Mode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="IsCancelled" Type="Boolean" Nullable="false" />
+    <Property Name="CancellationType" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CancellationRemarks" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CancellationDate" Type="DateTime" Precision="3" />
+    <Property Name="CancelledByOperatorId" Type="Int32" Nullable="false" />
+    <Property Name="CancelledByOperatorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="deviceId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblDeviceUser">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="employee_no" />
+      <PropertyRef Name="employee_nam" />
+      <PropertyRef Name="employee_cnic" />
+      <PropertyRef Name="designation" />
+      <PropertyRef Name="scale" />
+      <PropertyRef Name="employee_station" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="is_deleted" />
+      <PropertyRef Name="created_date" />
+      <PropertyRef Name="updated_date" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="employee_no" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="employee_nam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employee_cnic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="division" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="employee_mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="designation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="scale" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="employee_station" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="employee_role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="is_deleted" Type="Boolean" Nullable="false" />
+    <Property Name="created_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="updated_date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TblDistanceDir">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="Station_Code" />
+      <PropertyRef Name="Inter_Station_Distance" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Route_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Station_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Inter_Station_Distance" Type="Decimal" Precision="18" Scale="6" Nullable="false" />
+    <Property Name="Distance" Type="Decimal" Precision="18" Scale="6" />
+    <Property Name="StationSequnce" Type="Int32" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblEFTSale">
+    <Key>
+      <PropertyRef Name="Reservation_ID" />
+      <PropertyRef Name="Train_ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Train_Name" />
+      <PropertyRef Name="Coach_Class" />
+      <PropertyRef Name="ClassId" />
+      <PropertyRef Name="Coach_No" />
+      <PropertyRef Name="To_Station_ID" />
+      <PropertyRef Name="From_Station_ID" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="BasicFare" />
+      <PropertyRef Name="ReceivedFareAmount" />
+      <PropertyRef Name="RefundedAmount" />
+      <PropertyRef Name="NetEarning" />
+      <PropertyRef Name="BookedByOperatorId" />
+      <PropertyRef Name="Is_Reserved" />
+      <PropertyRef Name="BookingRemarks" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+    </Key>
+    <Property Name="Reservation_ID" Type="Int64" Nullable="false" />
+    <Property Name="Train_ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Train_Name" Type="String" MaxLength="65" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Coach_Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClassId" Type="Int32" Nullable="false" />
+    <Property Name="Coach_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seat_Berth" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TicketNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TicketCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TicketSerialNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="PassengerCNIC" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station_ID" Type="Int32" Nullable="false" />
+    <Property Name="From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="To_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Schedule_From_Station" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="From_Station_Seq" Type="Int32" Nullable="false" />
+    <Property Name="Quota" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="VoucherPassCode" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="Departure_Date" Type="DateTime" Precision="0" />
+    <Property Name="DepartureTime" Type="Time" Precision="7" />
+    <Property Name="Train_StartDate" Type="DateTime" Precision="0" />
+    <Property Name="BasicFare" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ReceivedFareAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="RefundedAmount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="NetEarning" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="BookedByOperatorId" Type="Int32" Nullable="false" />
+    <Property Name="Booking_Type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Payment_Method" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Payment_Mode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BookedByOperatorName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BookingDate" Type="DateTime" Precision="0" />
+    <Property Name="BookingTime" Type="Time" Precision="7" />
+    <Property Name="ReservationCenter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Reserved" Type="Boolean" Nullable="false" />
+    <Property Name="BookingRemarks" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="deviceId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TblFareRounding">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="RoundingOff" Type="Int32" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblInsurance">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Insurance_Amount" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Insurance_Amount" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Date_From" Type="DateTime" Precision="0" />
+    <Property Name="Date_To" Type="DateTime" Precision="0" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblMinimumFareLimit">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="MinimumFareLimit" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MinimumFareLimit" Type="Int32" Nullable="false" />
+    <Property Name="TrainCat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblOverwrite">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="StationFrom" />
+      <PropertyRef Name="StationTo" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Fare" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticket_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="Todate" Type="DateTime" Precision="0" />
+    <Property Name="StationFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StationTo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fare" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblOverwrite_GreenLine">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="StationFrom" />
+      <PropertyRef Name="StationTo" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Fare" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticket_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Precision="0" />
+    <Property Name="Todate" Type="DateTime" Precision="0" />
+    <Property Name="StationFrom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StationTo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fare" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblPassFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="Todate" />
+      <PropertyRef Name="LowerLeg" />
+      <PropertyRef Name="UpperLeg" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BaseFare" />
+      <PropertyRef Name="ResCharges" />
+      <PropertyRef Name="CED" />
+      <PropertyRef Name="FuelCharges" />
+      <PropertyRef Name="NonStopCharges" />
+      <PropertyRef Name="Otherharges" />
+      <PropertyRef Name="NightCharges" />
+      <PropertyRef Name="Rebate" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Todate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LowerLeg" Type="Int32" Nullable="false" />
+    <Property Name="UpperLeg" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BaseFare" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="ResCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="CED" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="FuelCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NonStopCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Otherharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NightCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Rebate" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Fare_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblPassFarePIT">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="FromDate" />
+      <PropertyRef Name="Todate" />
+      <PropertyRef Name="LowerLeg" />
+      <PropertyRef Name="UpperLeg" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="BaseFare" />
+      <PropertyRef Name="ResCharges" />
+      <PropertyRef Name="CED" />
+      <PropertyRef Name="FuelCharges" />
+      <PropertyRef Name="NonStopCharges" />
+      <PropertyRef Name="Otherharges" />
+      <PropertyRef Name="NightCharges" />
+      <PropertyRef Name="Rebate" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FromDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Todate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LowerLeg" Type="Int32" Nullable="false" />
+    <Property Name="UpperLeg" Type="Int32" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BaseFare" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="ResCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="CED" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="FuelCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NonStopCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Otherharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="NightCharges" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Rebate" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Fare_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblPCTDevice">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="device_id" />
+      <PropertyRef Name="device_type" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="device_id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="device_type" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_synced" Type="DateTime" Precision="3" />
+    <Property Name="mobile_no1" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="mobile_no2" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="division_id" Type="Int32" />
+    <Property Name="division_code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="division_name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="station_id" Type="Int32" />
+    <Property Name="station_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="station_name" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="up_train_id" Type="Int32" />
+    <Property Name="up_train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="up_train_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="dn_train_id" Type="Int32" />
+    <Property Name="dn_train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="dn_train_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="device_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fcm_id" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" />
+    <Property Name="is_deleted" Type="Boolean" />
+    <Property Name="created_date" Type="DateTime" Precision="3" />
+    <Property Name="updated_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TblStationRange">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Range_Code" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="From_Station_Seq" />
+      <PropertyRef Name="To_Station_Seq" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Range_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Route_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="From_Station_Seq" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="To_Station_Seq" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="FareType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTicketSale">
+    <Key>
+      <PropertyRef Name="train_id" />
+      <PropertyRef Name="from_station_id" />
+      <PropertyRef Name="to_station_id" />
+      <PropertyRef Name="adult_count" />
+      <PropertyRef Name="adult_fare" />
+      <PropertyRef Name="child_count" />
+      <PropertyRef Name="child_fare" />
+      <PropertyRef Name="excess_fare" />
+      <PropertyRef Name="total_fare" />
+    </Key>
+    <Property Name="ticket_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="qr_id" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="user_id" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="device_id" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="booking_date" Type="DateTime" Precision="3" />
+    <Property Name="travel_date" Type="DateTime" Precision="3" />
+    <Property Name="train_id" Type="Int32" Nullable="false" />
+    <Property Name="train_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="from_station_id" Type="Int32" Nullable="false" />
+    <Property Name="from_station_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="from_st_seq" Type="Int32" />
+    <Property Name="to_station_id" Type="Int32" Nullable="false" />
+    <Property Name="to_station_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="coach_no" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="class_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="adult_count" Type="Int32" Nullable="false" />
+    <Property Name="adult_fare" Type="Int32" Nullable="false" />
+    <Property Name="child_count" Type="Int32" Nullable="false" />
+    <Property Name="child_fare" Type="Int32" Nullable="false" />
+    <Property Name="excess_fare" Type="Int32" Nullable="false" />
+    <Property Name="ticket_code" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="voucher_no" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="total_fare" Type="Int32" Nullable="false" />
+    <Property Name="passenger_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cnic_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="mobile_no" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="seats_list" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="with_seats" Type="Int32" />
+    <Property Name="is_active" Type="Int32" />
+    <Property Name="is_printed" Type="Int32" />
+    <Property Name="is_synced" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TblTimePackage">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="LowerTimeLimit" />
+      <PropertyRef Name="UpperTimeLimit" />
+      <PropertyRef Name="Tariff" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticket_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LowerTimeLimit" Type="Int32" Nullable="false" />
+    <Property Name="UpperTimeLimit" Type="Int32" Nullable="false" />
+    <Property Name="Tariff" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblTrainCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="TrainCat" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="TrainCat" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TrainCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblTrainClassFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FareType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="tblTrainClassRangeFare">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Range_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fare_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblTrainRoute">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Route_Code" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Route_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="TblValidTrainClassTick">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="Train_Code" />
+      <PropertyRef Name="Class" />
+      <PropertyRef Name="Ticket_Code" />
+      <PropertyRef Name="Is_SeatCode" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Created_Date" />
+      <PropertyRef Name="Updated_Date" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Train_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Class" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Ticket_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Is_SeatCode" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Created_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Updated_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="OpenTicketDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCurrentCounters" EntityType="Self.tblCurrentCounter" />
+    <EntitySet Name="tblPCTConcessions" EntityType="Self.tblPCTConcession" />
+    <EntitySet Name="tblPCTFares" EntityType="Self.tblPCTFare" />
+    <EntitySet Name="tblPCTRefunds" EntityType="Self.tblPCTRefund" />
+    <EntitySet Name="tblPCTRoles" EntityType="Self.tblPCTRole" />
+    <EntitySet Name="tblPCTSales" EntityType="Self.tblPCTSale" />
+    <EntitySet Name="tblPCTTrains" EntityType="Self.tblPCTTrain" />
+    <EntitySet Name="tblPCTUsers" EntityType="Self.tblPCTUser" />
+    <EntitySet Name="tblRailStations" EntityType="Self.tblRailStation" />
+    <EntitySet Name="tblTrains" EntityType="Self.tblTrain" />
+    <EntitySet Name="tblTrainTimings" EntityType="Self.tblTrainTiming" />
+    <EntitySet Name="gaurdcharts" EntityType="Self.gaurdchart" />
+    <EntitySet Name="TblBerthCharges" EntityType="Self.TblBerthCharge" />
+    <EntitySet Name="TblConcessionTicks" EntityType="Self.TblConcessionTick" />
+    <EntitySet Name="tblCurrentSales" EntityType="Self.tblCurrentSale" />
+    <EntitySet Name="tblDeviceUsers" EntityType="Self.tblDeviceUser" />
+    <EntitySet Name="TblDistanceDirs" EntityType="Self.TblDistanceDir" />
+    <EntitySet Name="tblEFTSales" EntityType="Self.tblEFTSale" />
+    <EntitySet Name="TblFareRoundings" EntityType="Self.TblFareRounding" />
+    <EntitySet Name="TblInsurances" EntityType="Self.TblInsurance" />
+    <EntitySet Name="TblMinimumFareLimits" EntityType="Self.TblMinimumFareLimit" />
+    <EntitySet Name="TblOverwrites" EntityType="Self.TblOverwrite" />
+    <EntitySet Name="TblOverwrite_GreenLine" EntityType="Self.TblOverwrite_GreenLine" />
+    <EntitySet Name="TblPassFares" EntityType="Self.TblPassFare" />
+    <EntitySet Name="TblPassFarePITs" EntityType="Self.TblPassFarePIT" />
+    <EntitySet Name="tblPCTDevices" EntityType="Self.tblPCTDevice" />
+    <EntitySet Name="TblStationRanges" EntityType="Self.TblStationRange" />
+    <EntitySet Name="tblTicketSales" EntityType="Self.tblTicketSale" />
+    <EntitySet Name="TblTimePackages" EntityType="Self.TblTimePackage" />
+    <EntitySet Name="TblTrainCategories" EntityType="Self.TblTrainCategory" />
+    <EntitySet Name="TblTrainClassFares" EntityType="Self.TblTrainClassFare" />
+    <EntitySet Name="tblTrainClassRangeFares" EntityType="Self.tblTrainClassRangeFare" />
+    <EntitySet Name="TblTrainRoutes" EntityType="Self.TblTrainRoute" />
+    <EntitySet Name="TblValidTrainClassTicks" EntityType="Self.TblValidTrainClassTick" />
+    <FunctionImport Name="SP_Create_Update_PCTDevice">
+      <Parameter Name="device_id" Mode="In" Type="String" />
+      <Parameter Name="station_id" Mode="In" Type="Int32" />
+      <Parameter Name="station_code" Mode="In" Type="String" />
+      <Parameter Name="station_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Create_Update_PCTDevice_Backup">
+      <Parameter Name="deviceId" Mode="In" Type="String" />
+      <Parameter Name="fcmId" Mode="In" Type="String" />
+      <Parameter Name="msisdn1" Mode="In" Type="String" />
+      <Parameter Name="msisdn2" Mode="In" Type="String" />
+      <Parameter Name="stationId" Mode="In" Type="Int32" />
+      <Parameter Name="Station" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Create_Update_PCTUser">
+      <Parameter Name="pctUserId" Mode="In" Type="Int32" />
+      <Parameter Name="userId" Mode="In" Type="String" />
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+      <Parameter Name="cityId" Mode="In" Type="Int32" />
+      <Parameter Name="cityCode" Mode="In" Type="String" />
+      <Parameter Name="roleId" Mode="In" Type="Int32" />
+      <Parameter Name="Role" Mode="In" Type="String" />
+      <Parameter Name="stationId" Mode="In" Type="Int32" />
+      <Parameter Name="Station" Mode="In" Type="String" />
+      <Parameter Name="isActive" Mode="In" Type="Boolean" />
+      <Parameter Name="isInsert" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Create_Update_PCTUserRoles">
+      <Parameter Name="UserRoleId" Mode="In" Type="Int32" />
+      <Parameter Name="RoleName" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="Module" Mode="In" Type="String" />
+      <Parameter Name="isActive" Mode="In" Type="Boolean" />
+      <Parameter Name="isInsert" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="sp_FareCal" ReturnType="Collection(Decimal)">
+      <Parameter Name="DepDate" Mode="In" Type="DateTime" />
+      <Parameter Name="TrainCode" Mode="In" Type="String" />
+      <Parameter Name="Class" Mode="In" Type="String" />
+      <Parameter Name="StationFrom" Mode="In" Type="String" />
+      <Parameter Name="StationTo" Mode="In" Type="String" />
+      <Parameter Name="TickType" Mode="In" Type="String" />
+      <Parameter Name="S_B" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Get_PCTRoles" ReturnType="Collection(OpenTicketDBModel.SP_Get_PCTRoles_Result)" />
+    <FunctionImport Name="SP_Get_PCTUsreList" ReturnType="Collection(OpenTicketDBModel.SP_Get_PCTUsreList_Result)" />
+    <FunctionImport Name="SP_PCTUser_Authentication" ReturnType="Collection(OpenTicketDBModel.SP_PCTUser_Authentication_Result)">
+      <Parameter Name="UserId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Register_PCTDevice">
+      <Parameter Name="device_id" Mode="In" Type="String" />
+      <Parameter Name="device_type" Mode="In" Type="String" />
+      <Parameter Name="mobile_no1" Mode="In" Type="String" />
+      <Parameter Name="mobile_no2" Mode="In" Type="String" />
+      <Parameter Name="division_id" Mode="In" Type="Int32" />
+      <Parameter Name="division_code" Mode="In" Type="String" />
+      <Parameter Name="division_name" Mode="In" Type="String" />
+      <Parameter Name="station_id" Mode="In" Type="Int32" />
+      <Parameter Name="station_code" Mode="In" Type="String" />
+      <Parameter Name="station_name" Mode="In" Type="String" />
+      <Parameter Name="up_train_id" Mode="In" Type="Int32" />
+      <Parameter Name="up_train_code" Mode="In" Type="String" />
+      <Parameter Name="up_train_name" Mode="In" Type="String" />
+      <Parameter Name="dn_train_id" Mode="In" Type="Int32" />
+      <Parameter Name="dn_train_code" Mode="In" Type="String" />
+      <Parameter Name="dn_train_name" Mode="In" Type="String" />
+      <Parameter Name="device_status" Mode="In" Type="String" />
+      <Parameter Name="fcm_id" Mode="In" Type="String" />
+      <Parameter Name="is_active" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Update_PCTDevice_Train">
+      <Parameter Name="device_id" Mode="In" Type="String" />
+      <Parameter Name="up_train_id" Mode="In" Type="Int32" />
+      <Parameter Name="up_train_code" Mode="In" Type="String" />
+      <Parameter Name="up_train_name" Mode="In" Type="String" />
+      <Parameter Name="dn_train_id" Mode="In" Type="Int32" />
+      <Parameter Name="dn_train_code" Mode="In" Type="String" />
+      <Parameter Name="dn_train_name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_Rpt_GetGaurdChart_EFT" ReturnType="Collection(OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_Result)">
+      <Parameter Name="departuredate" Mode="In" Type="DateTime" />
+      <Parameter Name="trainid" Mode="In" Type="Int32" />
+      <Parameter Name="stationcode" Mode="In" Type="String" />
+      <Parameter Name="classcode" Mode="In" Type="String" />
+      <Parameter Name="coach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_Rpt_GetGaurdChart_EFT_OT" ReturnType="Collection(OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_OT_Result)">
+      <Parameter Name="departuredate" Mode="In" Type="DateTime" />
+      <Parameter Name="trainid" Mode="In" Type="Int32" />
+      <Parameter Name="stationcode" Mode="In" Type="String" />
+      <Parameter Name="classcode" Mode="In" Type="String" />
+      <Parameter Name="coach" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="USP_Rpt_GetGaurdChart_EFT_OT_1" ReturnType="Collection(OpenTicketDBModel.USP_Rpt_GetGaurdChart_EFT_OT_1_Result)">
+      <Parameter Name="departuredate" Mode="In" Type="DateTime" />
+      <Parameter Name="trainid" Mode="In" Type="Int32" />
+      <Parameter Name="stationcode" Mode="In" Type="String" />
+      <Parameter Name="classcode" Mode="In" Type="String" />
+      <Parameter Name="coach" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="SP_Get_PCTRoles_Result">
+    <Property Type="Int32" Name="RoleID" Nullable="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="ModuleName" Nullable="true" MaxLength="100" />
+    <Property Type="DateTime" Name="Created_Date" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="Updated_Date" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="SP_Get_PCTUsreList_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="user_Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="user_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="user_station_id" Nullable="false" />
+    <Property Type="String" Name="user_station_code" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="city_Id" Nullable="true" />
+    <Property Type="String" Name="city_code" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="role_id" Nullable="true" />
+    <Property Type="String" Name="role" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="is_active" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_PCTUser_Authentication_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="user_Id" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="user_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="password" Nullable="false" MaxLength="250" />
+    <Property Type="Int32" Name="user_station_id" Nullable="false" />
+    <Property Type="String" Name="user_station_code" Nullable="false" MaxLength="10" />
+    <Property Type="Int32" Name="city_Id" Nullable="true" />
+    <Property Type="String" Name="city_code" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="role_id" Nullable="true" />
+    <Property Type="String" Name="role" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="USP_Rpt_GetGaurdChart_EFT_Result">
+    <Property Type="Int64" Name="ReservationId" Nullable="false" />
+    <Property Type="String" Name="Quota" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Schedule_From_Station" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Coach_Class" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Coach_No" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="ClassId" Nullable="false" />
+    <Property Type="DateTime" Name="Departure_Date" Nullable="true" />
+    <Property Type="String" Name="DepartureTime" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="From_Station" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Seat_Berth" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="To_Station" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Train_Code" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Train_Name" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="VoucherPassCode" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="TicketNumber" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="TicketCode" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="TicketSerialNumber" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="PassengerName" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PassengerCNIC" Nullable="true" MaxLength="25" />
+    <Property Type="Boolean" Name="Is_Reserved" Nullable="false" />
+    <Property Type="String" Name="BookingRemarks" Nullable="true" MaxLength="350" />
+    <Property Type="Int32" Name="Train_ID" Nullable="false" />
+    <Property Type="Int32" Name="From_Station_ID" Nullable="false" />
+    <Property Type="Int32" Name="To_Station_ID" Nullable="false" />
+    <Property Type="DateTime" Name="Train_StartDate" Nullable="true" />
+    <Property Type="String" Name="Booking_Type" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Payment_Method" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="Payment_Mode" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="USP_Rpt_GetGaurdChart_EFT_OT_Result">
+    <Property Type="String" Name="ticket_id" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="qr_id" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="user_id" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="device_id" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="booking_date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="travel_date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="train_id" Nullable="false" />
+    <Property Type="String" Name="train_code" Nullable="true" MaxLength="10" />
+    <Property Type="Int32" Name="from_station_id" Nullable="false" />
+    <Property Type="String" Name="from_station_code" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="from_st_seq" Nullable="true" />
+    <Property Type="Int32" Name="to_station_id" Nullable="false" />
+    <Property Type="String" Name="to_station_code" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="coach_no" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="class_code" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="adult_count" Nullable="false" />
+    <Property Type="Int32" Name="adult_fare" Nullable="false" />
+    <Property Type="Int32" Name="child_count" Nullable="false" />
+    <Property Type="Int32" Name="child_fare" Nullable="false" />
+    <Property Type="Int32" Name="excess_fare" Nullable="false" />
+    <Property Type="String" Name="ticket_code" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="voucher_no" Nullable="true" MaxLength="25" />
+    <Property Type="Int32" Name="total_fare" Nullable="false" />
+    <Property Type="String" Name="passenger_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="cnic_no" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="mobile_no" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="seats_list" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="with_seats" Nullable="true" />
+    <Property Type="Int32" Name="is_active" Nullable="true" />
+    <Property Type="Int32" Name="is_printed" Nullable="true" />
+    <Property Type="Int32" Name="is_synced" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="USP_Rpt_GetGaurdChart_EFT_OT_1_Result">
+    <Property Type="String" Name="ticket_id" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="booking_date" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="travel_date" Nullable="true" Precision="23" />
+    <Property Type="String" Name="train_code" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="from_station_code" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="to_station_code" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="coach_no" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="class_code" Nullable="true" MaxLength="5" />
+    <Property Type="Int32" Name="adult_count" Nullable="false" />
+    <Property Type="Int32" Name="child_count" Nullable="false" />
+    <Property Type="String" Name="ticket_code" Nullable="true" MaxLength="5" />
+    <Property Type="String" Name="voucher_no" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="passenger_name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="cnic_no" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="mobile_no" Nullable="true" MaxLength="15" />
+  </ComplexType>
+</Schema>
