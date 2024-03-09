@@ -113,7 +113,7 @@ namespace HAccounts.APIs.Utils
                 //myString = myString.Replace("{#link#}", Constants.applicationPath + "verify-email?" + "ExpiryDate=" + formattedDateTime + "&?email=" + mem.Email_Address + "&SecurityCode=" + mem.Email_Verification_Code + "&UserName=" + mem.User_Name);
                 myString = myString.Replace("{#link#}", mem.Verification_Code);
                 myString = myString.Replace("{#EmailAddress#}", mem.User_Email);
-               
+                myString = myString.Replace("{#Code#}", mem.Verification_Code);
 
                 MailMessage message = new MailMessage();
                 SmtpClient client = new SmtpClient();
