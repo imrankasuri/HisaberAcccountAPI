@@ -1,5 +1,3 @@
-C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.csproj.AssemblyReference.cache
-C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.csproj.CoreCompileInputs.cache
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\HAccounts.APIs.dll.config
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\HAccounts.APIs.dll
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\HAccounts.APIs.pdb
@@ -38,6 +36,8 @@ C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\System.Web.Razor.xml
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\System.Web.WebPages.xml
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\System.Web.WebPages.Deployment.xml
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\bin\System.Web.WebPages.Razor.xml
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.csproj.CoreCompileInputs.cache
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.csproj.CopyComplete
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.dll
 C:\E Drive\Projects\Git\HisaberAcccountAPI\PPS.APIs\obj\Debug\HAccounts.APIs.pdb

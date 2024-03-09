@@ -15,6 +15,9 @@ namespace HAccounts.BE
         public DateTime LastPasswordChange { get; set; }
         public string User_Type { get; set; }
         public string Android_Token { get; set; }
+        public Boolean Email_Verified { get; set; }
+        public string Verification_Code { get; set; }
+        public DateTime Verification_Expiry { get; set; }
         public Boolean Is_Active { get; set; }
         public Boolean Is_Deleted { get; set; }
         public DateTime Created_Date { get; set; }

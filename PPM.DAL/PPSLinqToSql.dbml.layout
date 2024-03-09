@@ -204,10 +204,10 @@
         <classShapeMoniker Id="e3f12f1a-539e-4978-811e-c755131215ed" />
       </nodes>
     </associationConnector>
-    <classShape Id="a8ab1a68-62a6-42a9-9d61-3f87397813d3" isExpanded="false" absoluteBounds="3.25, 6.625, 2, 0.45">
+    <classShape Id="9a30f2fe-2fed-4a4b-bd09-82ca6c93a822" isExpanded="false" absoluteBounds="3.375, 6.625, 2, 0.45">
       <DataClassMoniker Name="/PPSLinqToSqlDataContext/tblUser" />
       <nestedChildShapes>
-        <elementListCompartment Id="fa896558-4a80-4fc8-a4fd-fbd85543ba6f" absoluteBounds="3.265, 7.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="749f64af-654c-43af-9e7d-36af2295d6d1" absoluteBounds="3.39, 7.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

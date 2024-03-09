@@ -11246,6 +11246,12 @@ namespace HAccounts.DAL
 		
 		private string _Android_Token;
 		
+		private bool _Email_Verified;
+		
+		private string _Verification_Code;
+		
+		private System.DateTime _Verification_Expiry;
+		
 		private bool _Is_Active;
 		
 		private bool _Is_Deleted;
@@ -11276,6 +11282,12 @@ namespace HAccounts.DAL
     partial void OnUser_TypeChanged();
     partial void OnAndroid_TokenChanging(string value);
     partial void OnAndroid_TokenChanged();
+    partial void OnEmail_VerifiedChanging(bool value);
+    partial void OnEmail_VerifiedChanged();
+    partial void OnVerification_CodeChanging(string value);
+    partial void OnVerification_CodeChanged();
+    partial void OnVerification_ExpiryChanging(System.DateTime value);
+    partial void OnVerification_ExpiryChanged();
     partial void OnIs_ActiveChanging(bool value);
     partial void OnIs_ActiveChanged();
     partial void OnIs_DeletedChanging(bool value);
@@ -11449,6 +11461,66 @@ namespace HAccounts.DAL
 					this._Android_Token = value;
 					this.SendPropertyChanged("Android_Token");
 					this.OnAndroid_TokenChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email_Verified", DbType="Bit NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public bool Email_Verified
+		{
+			get
+			{
+				return this._Email_Verified;
+			}
+			set
+			{
+				if ((this._Email_Verified != value))
+				{
+					this.OnEmail_VerifiedChanging(value);
+					this.SendPropertyChanging();
+					this._Email_Verified = value;
+					this.SendPropertyChanged("Email_Verified");
+					this.OnEmail_VerifiedChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Verification_Code", DbType="NVarChar(20)", UpdateCheck=UpdateCheck.Never)]
+		public string Verification_Code
+		{
+			get
+			{
+				return this._Verification_Code;
+			}
+			set
+			{
+				if ((this._Verification_Code != value))
+				{
+					this.OnVerification_CodeChanging(value);
+					this.SendPropertyChanging();
+					this._Verification_Code = value;
+					this.SendPropertyChanged("Verification_Code");
+					this.OnVerification_CodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Verification_Expiry", DbType="DateTime NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		public System.DateTime Verification_Expiry
+		{
+			get
+			{
+				return this._Verification_Expiry;
+			}
+			set
+			{
+				if ((this._Verification_Expiry != value))
+				{
+					this.OnVerification_ExpiryChanging(value);
+					this.SendPropertyChanging();
+					this._Verification_Expiry = value;
+					this.SendPropertyChanged("Verification_Expiry");
+					this.OnVerification_ExpiryChanged();
 				}
 			}
 		}

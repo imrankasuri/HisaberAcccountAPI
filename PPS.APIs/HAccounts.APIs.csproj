@@ -166,12 +166,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Utils\EmailSender.cs" />
     <Compile Include="Utils\GeneralFunctions.cs" />
     <Compile Include="Utils\MultipartMediaTypeFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\AtomiModel.dll" />
     <Content Include="Email_Template\Forgot_Personal.htm" />
+    <Content Include="Email_Template\verify-email.htm" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\APIs.pubxml" />

@@ -527,6 +527,9 @@
       <Column Name="LastPasswordChange" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="User_Type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Android_Token" Type="System.String" DbType="NVarChar(3000)" CanBeNull="true" />
+      <Column Name="Email_Verified" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Verification_Code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Verification_Expiry" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Is_Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Is_Deleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Created_Date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />

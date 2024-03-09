@@ -137,34 +137,21 @@ namespace HAccounts.APIs.Controllers
         public HttpResponseMessage SignUp([FromBody] GeneralRequestBE inParams)
         {
 
-            if (inParams != null && !String.IsNullOrEmpty(inParams.UserID.ToString()) && !String.IsNullOrEmpty(inParams.AccessKey))
+            if (inParams != null )
             {
-                if (AccessKeyDAL.CheckValidAccessKey(Convert.ToInt32(inParams.UserID), inParams.AccessKey) == false)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, new
-                    {
-                        status_code = 0,
-                        status_message = "Invalid Access Key."
-                    });
-                }
-
+                
                 try
                 {
-                    //check debit and credit accounts exists
-                   
-
-
-                    UserBE loggedinUser = UserDAL.GetUserBEByID(Convert.ToInt32(inParams.UserID));
-
-
-                   
                     UserBE user = new UserBE();
                     user.FullName = inParams.FullName;
                     user.User_Mobile = inParams.User_Mobile;
-                    user.User_Email = inParams.User_Name;
+                    user.User_Email = inParams.User_Email;
                     user.Password = GeneralFunctions.Encrypt(inParams.Password);
                     user.LastPasswordChange = DateTime.Now;
-                    user.User_Type = inParams.User_Type;
+                    user.Email_Verified = false;
+                    user.Verification_Code = GeneralFunctions.GetRandomNumber(100000, 999999);
+                    user.Verification_Expiry = DateTime.Now.AddHours(100);
+                    user.User_Type = "User";
                     user.Created_Date = DateTime.Now;
                     user.Updated_Date = DateTime.Now;
                     user.Is_Active = true;
@@ -176,7 +163,7 @@ namespace HAccounts.APIs.Controllers
                    
 
                     //check for already exist user
-                    UserBE userEmailAlready = UserDAL.GetUserByEmailAddress(inParams.User_Name);
+                    UserBE userEmailAlready = UserDAL.GetUserByEmailAddress(inParams.User_Email);
                     if(userEmailAlready != null)
                     {
                         return Request.CreateResponse(HttpStatusCode.OK, new
@@ -208,10 +195,18 @@ namespace HAccounts.APIs.Controllers
                     int userID  = UserDAL.Save(user);
                     if(userID > 0)
                     {
+                        user.ID = userID;
+                        EmailSender.sendSignUpEmail(user);
                         return Request.CreateResponse(HttpStatusCode.OK, new
                         {
                             status_code = 1,
-                            status_message = "User Added Successfully!",
+                            status_message = "Signup Successfully!",
+                            UserID = userID,
+                            User_Email = user.User_Email,
+                            User_Mobile = user.User_Mobile,
+                            FullName = user.FullName,
+                            LastPasswordChange = user.LastPasswordChange,
+                            Email_Verified = user.Email_Verified,
                         });
                     }
                     else

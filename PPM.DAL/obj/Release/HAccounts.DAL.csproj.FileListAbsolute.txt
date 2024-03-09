@@ -1,0 +1,10 @@
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\bin\Release\HAccounts.DAL.dll.config
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\bin\Release\HAccounts.DAL.dll
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\bin\Release\HAccounts.DAL.pdb
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\bin\Release\HAccounts.BE.dll
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\bin\Release\HAccounts.BE.pdb
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\obj\Release\HAccounts.DAL.csproj.AssemblyReference.cache
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\obj\Release\HAccounts.DAL.csproj.CoreCompileInputs.cache
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\obj\Release\HAccounts.DAL.csproj.CopyComplete
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\obj\Release\HAccounts.DAL.dll
+C:\E Drive\Projects\Git\HisaberAcccountAPI\PPM.DAL\obj\Release\HAccounts.DAL.pdb

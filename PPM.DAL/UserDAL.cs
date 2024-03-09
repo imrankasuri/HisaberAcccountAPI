@@ -76,6 +76,9 @@ namespace HAccounts.DAL
                               Password = objEntity.Password,
                               User_Type = objEntity.User_Type,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry= objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -118,6 +121,9 @@ namespace HAccounts.DAL
                               Password = objEntity.Password,
                               User_Type = objEntity.User_Type,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry = objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -161,6 +167,9 @@ namespace HAccounts.DAL
                               Password = objEntity.Password,
                               User_Type = objEntity.User_Type,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry = objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -202,6 +211,9 @@ namespace HAccounts.DAL
                               Password = objEntity.Password,
                               User_Type = objEntity.User_Type,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry = objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -242,6 +254,9 @@ namespace HAccounts.DAL
                               FullName = objEntity.FullName,
                               LastPasswordChange = objEntity.LastPasswordChange,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry = objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -285,6 +300,9 @@ namespace HAccounts.DAL
                               Password = objEntity.Password,
                               User_Type = objEntity.User_Type,
                               Android_Token = objEntity.Android_Token,
+                              Email_Verified = objEntity.Email_Verified,
+                              Verification_Code = objEntity.Verification_Code,
+                              Verification_Expiry = objEntity.Verification_Expiry,
                               Is_Active = objEntity.Is_Active,
                               Is_Deleted = objEntity.Is_Deleted,
                               Created_Date = objEntity.Created_Date,
@@ -322,6 +340,9 @@ namespace HAccounts.DAL
                 result.Password = objEntity.Password;
                 result.User_Type = objEntity.User_Type;
                 result.Android_Token = objEntity.Android_Token;
+                result.Email_Verified = objEntity.Email_Verified;
+                result.Verification_Code = objEntity.Verification_Code;
+                result.Verification_Expiry = objEntity.Verification_Expiry;
                 result.Is_Active = objEntity.Is_Active;
                 result.Is_Deleted = objEntity.Is_Deleted;
                 result.Created_Date = objEntity.Created_Date;

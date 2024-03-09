@@ -9,7 +9,7 @@ namespace HAccounts.BE
     {
       
         public string Android_Token { get; set; }
-        public string User_Name { get; set; }
+        public string User_Email { get; set; }
         public string User_Type { get; set; }
         public string Password { get; set; }
         public string User_Mobile { get; set; }
